@@ -1,0 +1,22 @@
+header-links:
+  - text: home
+    url: /index
+  - text: about
+    url: /about
+    sublinks:
+      - text: choice 1
+        url: 
+      - text: choice 2
+        url: 
+      - text: choice 3
+        url: 
+  - text: contact
+    url: /contact
+  - text: dan was here
+    url: /coolPlace
+footer-links:
+  - heading: List 1
+    url:
+    url:
+    url:
+

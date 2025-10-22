@@ -1,0 +1,34 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+    <div class="flex content-mover">
+      <div class="content-block">
+        {{block.text_html}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  #section-{{forloop.index}} .content-mover{
+    min-height:{{block.height}};
+    justify-content: {{block.text-alignment}};
+    align-items: {{block.vertical-placement}};
+    text-align: {{block.text-align}}
+  }
+
+  #section-{{forloop.index}} .content-block {
+    width:{{block.width}};
+  }
+
+
+
+</style>
+
+<!-- id: text-block
+      text_html: <h1>Welcome to your homepage! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum itaque qui obcaecati voluptatem quaerat facere, nesciunt eaque molestiae, cum, animi iure nulla assumenda maxime sequi consectetur sed adipisci mollitia alias?</h1>
+      height: 100vh
+      width: 33%
+      alignment: center
+      placement: center
+      text-align: center -->

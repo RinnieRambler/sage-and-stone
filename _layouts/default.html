@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="/assets/images/icons8-car.gif">
+    <title>{{page.title}}</title>
+
+    <!-- slick slider cdn slick.css has to be before theme.min (add slick js below jquery) -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- meta-fields / SEO -->
+    <title>{{page.seo.title | default: site.data.seo.title }}</title>
+    <meta name="description" content="{{page.seo.description | default: site.data.seo.description}}">
+    <meta property="og:image" content="{{page.data.seo.image | default: site.data.seo.image}}"/>
+    
+    <meta name="google" content="nositelinkssearchbox">
+    {% if site.data.seo.google-site-verification %}
+      <meta name="google-site-verification" content="{{site.data.seo.google-site-verification}}">
+    {% endif %}
+    
+
+    {% if page.seo.index == true %}
+      <meta name="robots" content="all">
+    {% else %}
+      <meta name="robots" content="none">
+    {% endif %}
+
+</head>
+
+<body>
+    
+    
+<style>
+
+/* pulling in colour scheme for entire site from data file */
+    :root,{% for scheme in site.data.style.schemes-colors %}
+        .scheme-{{scheme.scheme_name}} {
+            --bg-color: {{scheme.bg-color}};
+            --bg-secondary-color: {{scheme.bg-secondary-color}};
+            --text-color: {{scheme.text-color}};
+            --colored-button-bg: {{scheme.featured-button-color}};
+            --colored-button-text: {{scheme.featured-button-text-color}};
+            --colored-button-border: {{scheme.featured-button-border}};
+        }
+    {% endfor %}
+
+</style>
+
+<!-- choose nav file to include -->
+{% include /header/nav-drop-down.html %}
+
+<!-- outputting blocks from page front matter -->
+
+{% for block in page.blocks %}
+<!-- {{block.id}} -->
+    <div class="scheme-{{block.scheme-color}}">
+        {% include /blocks/{{block.id}}.html %}
+    </div>
+
+{% endfor %}
+
+<!-- checking if we have filterable grid -->
+
+    {% for block in page.blocks %}
+        {% if block.id == "filterable-grid" %}
+        {% assign has-filterable-gallery = true %}
+        {% endif %}
+    {% endfor %}
+
+<!-- jQuery down here to stop slow load -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- slick js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script>
+    
+    // scripts for scripts that vary content each time
+    
+{% for block in page.blocks %}
+
+
+
+    {% if block.id == "slider/slider-carousel" %}
+
+
+$('#section-{{forloop.index}} .responsive-slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+    {% endif %}
+
+{% endfor %}
+
+
+// scripts that don't vary (no repeat)
+
+    {% if has-filterable-gallery %}
+// Filterable Gallery Script Below
+  const gallery = document.querySelectorAll('.filterable-gallery')
+
+gallery.forEach(section => {
+  
+
+  const filterButtons = section.querySelectorAll('.filter-buttons')
+
+  const gridItems = section.querySelectorAll('.grid-items')
+
+  console.log(filterButtons,gridItems)
+
+  function filterGallery() {
+
+  filterButtons.forEach(button => {
+    button.classList.remove('active')
+  });
+
+  this.classList.add('active')
+
+  let target = this.innerHTML
+
+    gridItems.forEach(image => {
+      if (image.classList.contains(target)){
+        image.classList.remove('hidden')
+      }
+      else { 
+        image.classList.add('hidden')
+      }
+    } )
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', filterGallery)
+  });
+
+});
+
+{% endif %}
+</script>
+
+<!-- Like all the other snippets, this one is also a self contained snippet. It is a cookie banner that is fully functional (with revocable cookies at any time) and can be added to any website. -->
+    
+    <!-- The banner is a fixed banner that is at the bottom of the page. It has 3 buttons, one for accepting all cookies, one for accepting only the analytics cookies and one for accepting only the darkmode cookies. you can add more buttons but these were the ones I cam up with -->
+    <div id="cookie-notice" class="init">
+        <button class="unaccepted accept-all hidden">all cookies</button>
+        <button class="unaccepted cookieButton" data-cookie-type="analyticCookies">analytic cookies</button>
+        <!-- <button class="unaccepted cookieButton" data-cookie-type="darkmode">darkmode cookies</button> -->
+        <button class="hide-button" data-cookie-type="hideBanner">
+          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.5 11C7.22386 11 7 10.7761 7 10.5C7 10.2239 7.22386 10 7.5 10C7.77614 10 8 10.2239 8 10.5C8 10.7761 7.77614 11 7.5 11Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 18C12.4477 18 12 17.5523 12 17C12 16.4477 12.4477 16 13 16C13.5523 16 14 16.4477 14 17C14 17.5523 13.5523 18 13 18Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 7.01L11.01 6.99889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 16.01L8.01 15.9989" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 9.01L16.01 8.99889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 14.01L17.01 13.9989" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 12.01L13.01 11.9989" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      </div>
+      
+      
+      <style>
+      
+        body.darkmode{
+          background-color: #272;
+          color:antiquewhite;
+        }
+      
+        #cookie-notice {
+          padding: 0.5rem 1rem;
+          text-align: center;
+          position: fixed;
+          left: calc(-100% + 2rem);
+          right: calc(100% - 2rem);
+          bottom: 0;
+          background: #222;
+          color: rgba(255,255,255,0.8);
+          transition: all 2s;
+        }
+        #cookie-notice.active {
+          left: 1rem;
+          right: 1rem;
+          width: calc(100% - 2rem);
+        }
+      
+        #cookie-notice.init{
+          right:100vw;
+          left: -100vw;
+        } 
+        #cookie-notice a {
+          display: inline-block;
+          cursor: pointer;
+          margin-left: 0.5rem;
+        }
+        #cookie-notice .button-subtle {
+        opacity: 0.8;
+        }
+      
+        #close-cookie-banner {
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 0.8rem;
+        opacity: 0.5
+        }
+      
+        button.unaccepted::before{
+          content: 'accept ';
+        }
+        button.accepted::before{
+          content: 'revoke ';
+        }
+        body button.hide-button::before {
+          content: ''
+        }
+        body button.hide-button{
+          position: absolute;
+          right: 1rem;
+        }
+      </style>
+      
+      <!-- first part of google data thing within script tags  -->
+      <script>
+        function createCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+      
+      
+      
+      
+        const cookieBanner = document.querySelector('#cookie-notice')
+        const cookieButtons = cookieBanner.querySelectorAll('.cookieButton')
+        const acceptAllButton = cookieBanner.querySelector('.accept-all')
+        const hideButton = cookieBanner.querySelector('.hide-button')
+        let allCookiesAccepted = true
+        let unaccepted = false 
+      
+      
+        // button initilisaztion
+        cookieButtons.forEach(button => {
+          let buttonCookie = button.dataset.cookieType
+      
+          if ( readCookie(buttonCookie) == 'accepted' ){
+            button.classList.remove('unaccepted')
+            button.classList.add('accepted')
+          }
+      
+          button.addEventListener('click', () => {
+            
+            if (button.classList.contains('unaccepted')){
+              button.classList.remove('unaccepted')
+              button.classList.add('accepted')
+              createCookie(buttonCookie,'accepted',31)
+            } else {
+              button.classList.add('unaccepted')
+              button.classList.remove('accepted')
+              createCookie(buttonCookie,'unaccepted',31) 
+            }
+            runCookies()
+            console.log(buttonCookie, readCookie(buttonCookie))
+          })
+      
+        })
+      
+        // checks for unaccepted cookie buttons 
+      function checkForUnacceptedCookies() {
+        console.log('cookie checker')
+      
+        if (Array.from(cookieButtons).some((node) => node.classList.contains('unaccepted'))) {
+          return true
+        }
+        return false
+      }
+        
+      
+        // runs the codes based on different button
+        function runCookies() {
+            allCookiesAccepted = true
+            if (readCookie('analyticCookies')=='accepted') {
+              // analitic cookie codes
+              // add in second part HERE of google data thing NOT in script tags - STRIP THE SCRIPT!!!!!
+            } 
+  
+          //   if (readCookie('darkmode')=='accepted') {
+          //     // darkmode cookie codes
+          //     document.querySelector('body').classList.add('darkmode')
+          //   } else {
+          //     document.querySelector('body').classList.remove('darkmode')
+          //   }
+  
+            if (readCookie('hideBanner') != 'accepted') {
+              cookieBanner.classList.add('active')
+            } else {
+              cookieBanner.classList.remove('active')
+            }
+      
+            console.log(checkForUnacceptedCookies(),'output')
+      
+            if (checkForUnacceptedCookies() === true) {
+              acceptAllButton.classList.remove('accepted')
+              acceptAllButton.classList.add('unaccepted')
+            } else {
+              acceptAllButton.classList.remove('unaccepted')
+              acceptAllButton.classList.add('accepted')
+            }
+        }
+      
+      
+        // runs the cookies 
+        runCookies()
+      
+      
+      
+      // just a checker for dev
+        console.log("cookies", document.cookie, allCookiesAccepted)
+      
+      const allCookieButton = cookieBanner.querySelector('.accept-all')
+      
+      allCookieButton.addEventListener('click', () => {
+          if (allCookieButton.classList.contains('unaccepted')) {
+              cookieButtons.forEach(button => {
+      
+                  if (button.classList.contains('unaccepted')) {
+                      button.click()
+                  }
+      
+              })
+          } else {
+              cookieButtons.forEach(button => {
+      
+                  button.click()
+      
+              })
+          }
+      })
+      
+      
+        // hide popup logic
+      
+        if (readCookie('hideBanner') == "unaccepted") {
+          hideButton.classList.add('unaccepted')
+        } else {
+          hideButton.classList.add('accepted')
+        }
+      
+      hideButton.addEventListener('click', () => {
+            
+          let buttonCookie = hideButton.dataset.cookieType
+            if (hideButton.classList.contains('unaccepted')){
+              hideButton.classList.remove('unaccepted')
+              hideButton.classList.add('accepted')
+              createCookie(buttonCookie,'accepted',31)
+            } else {
+              hideButton.classList.add('unaccepted')
+              hideButton.classList.remove('accepted')
+              createCookie(buttonCookie,'unaccepted',31) 
+            }
+            runCookies()
+          })
+      
+      
+          // popup delay
+      
+          setTimeout(() => {
+        cookieBanner.classList.remove('init')
+      }, "1000")
+      
+      </script>
+  
+
+</body>
+
+</html>

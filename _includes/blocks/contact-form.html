@@ -1,0 +1,35 @@
+FORM SECTION BELOW:
+
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+    <form>
+      {% for input in block.inputs %}
+      {% if input.label %}
+      <label>
+        <h3>{{input.label}}</h3>
+        {% endif %}
+      
+        {% case input.type %}
+
+          {% when 'text' %}
+
+
+            <input type="text" name="{{input.name}}" id="{{input.name}}" placeholder="{{input.placeholder-text}}" {% if input.required %} required {% endif %}>
+            
+            {% when 'email' %}
+            <input type="email" name="{{input.name}}" id="{{input.name}}" placeholder="{{input.placeholder-text}}" {% if input.required %} required {% endif %}>
+            
+            {% when 'phone' %}
+            <input type="tel" name="{{input.name}}" id="{{input.name}}" placeholder="{{input.placeholder-text}}" {% if input.required %} required {% endif %}>
+            
+            {% when 'textarea' %}
+            <textarea name="{{input.name}}" id="{{input.name}}" {% if input.required %} required {% endif %}></textarea>
+            
+            {% endcase %}
+            {% if input.label %}
+            </label>
+            {% endif %}
+      {% endfor %}
+    </form>
+  </div>
+</section>

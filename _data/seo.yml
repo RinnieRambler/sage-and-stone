@@ -1,0 +1,7 @@
+# this is not page specific but site wide as a back up in case client adds new page without SEO, page specific in front matter
+title: title that appears in google results
+description: small blurb below title in google. keep under 160 charachters for desktop and 120 for mobile
+image: appears in google
+favicon: little circle google
+google-site-verification: ask tina - think google gives you a list of characters when you sign up for google analytics
+keywords:

@@ -1,0 +1,40 @@
+<section id="section-{{forloop.index}}" class="relative">
+  <img src="{{block.image}}" alt="" class="absolute inset-0 w-full h-full object-cover">
+
+{% unless block.overlay.opacity == 0 %}
+<div class="overlay absolute inset-0 w-full h-full"></div>
+{% endunless %}
+
+    <div class="max-width mx-auto relative">
+      <div class="flex content-mover">
+        <div class="content-block">
+          {{block.text_html}}
+        </div>
+      </div>
+    </div>
+</section>
+
+<style>
+
+{% unless block.overlay.opacity == 0 %}
+
+#section-{{forloop.index}} .overlay{
+  background-color: {{block.overlay.color}};
+  opacity: {{block.overlay.opacity}};
+}
+{% endunless %}
+
+  #section-{{forloop.index}} .content-mover{
+    min-height:{{block.height}};
+    justify-content: {{block.alignment}};
+    align-items: {{block.placement}};
+    text-align: {{block.text-align}}
+  }
+
+  #section-{{forloop.index}} .content-block {
+    width:{{block.width}};
+  }
+
+
+</style>
+

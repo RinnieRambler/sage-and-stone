@@ -1,0 +1,35 @@
+<section id="section-{{forloop.index}}" class="filterable-gallery">
+  
+  <!-- for filtering -->
+
+
+  
+  <!-- 1 div for filter menu -->
+  
+  <div>
+    <span class="filter-buttons active">all</span>
+
+    {% for button in block.filter-buttons %}
+    <span class="filter-buttons">{{button}}</span>
+    {% endfor %}
+  </div>
+  
+  <!-- 1 div for list of things we're filtering -->
+  
+  <div class="grid grid-cols-3 gap-4">
+    {% for item in block.grid-item %}
+    <div class="grid-items all {{item.category}}">
+      <img src="{{item.dish}}" alt="{{item.alt}}">
+      <div>{{item.caption}}</div> 
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+
+  .filter-buttons.active{
+    color:chocolate;
+  }
+
+</style>

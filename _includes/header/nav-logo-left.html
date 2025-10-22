@@ -1,0 +1,13 @@
+<header>
+  <div class="max-width ">
+    <div class="flex justify-between">
+
+      <a><h2>I am a badass navigator</h2></a>
+      <nav class="" >
+        {% for link in site.data.navigation.header-links %}
+        <a href="{{link.url}}">{{link.text}}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>

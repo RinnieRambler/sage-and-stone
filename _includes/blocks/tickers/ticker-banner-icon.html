@@ -1,0 +1,111 @@
+<section class="px-0">  
+  <div class="tickerBanner" data-banner-speed="{{block.banner-style.speed}}">
+    {% for message in block.banner-message %}
+    <span class="text-block">
+      <img src=" {{block.banner-style.icon}}" alt="">
+    </span>
+      <a href="{{message.url}}" class="text-block">{{message.text}}</a>
+      {% endfor %}
+  </div>
+</section> 
+
+<style>
+
+.text-block img {
+  width: 7rem;
+}
+
+
+.tickerBanner{
+  --bannerBlockLength: 280px;
+  --bannerBlockTime: 2s;
+overflow-X: hidden;
+display: flex;
+{% if block.banner-style.direction == "left" %}
+flex-direction: row-reverse;
+{% else %}
+flex-direction: row;
+{% endif %}
+/* prevents gap - if text right to left then out 'row' instead of row-reverse */
+text-align: center;
+}
+
+
+.tickerBanner > * {
+  display: inline-block;
+  padding: 1vw;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tickerBanner.active:hover > *{
+  animation-play-state: paused;
+}
+.tickerBanner.active > * {
+  animation: ticker 2s infinite linear;
+  animation-duration: var(--bannerBlockTime), 2s;
+} 
+
+@keyframes ticker {
+  {% if block.banner-style.direction == "left" %}
+    from {left:0}
+    to   {left:var(--bannerBlockLength)}
+    {% else %}
+    from {right:0}
+    to   {right:var(--bannerBlockLength)}
+    {% endif %}
+}
+</style>
+
+
+<script>
+  const tickerBanners = document.querySelectorAll('.tickerBanner');
+
+tickerBanners.forEach(banner => {
+
+
+
+  let textBlock = banner.querySelectorAll('.text-block');
+
+
+  let bannerBlock = 0;
+  textBlock.forEach( block => {
+    bannerBlock += block.offsetWidth
+  });
+
+  let bannerLength = bannerBlock
+  console.log(bannerBlock)
+  console.log(banner.dataset.bannerSpeed)
+  
+  
+  banner.style.setProperty('--bannerBlockLength', `${bannerBlock}px`);
+  banner.style.setProperty('--bannerBlockTime', `${(bannerBlock / banner.dataset.bannerSpeed )}s`);
+
+  
+  function extendBanner() {
+  if (bannerLength < (screen.width + bannerBlock) ) {
+    textBlock.forEach(block => {
+    console.log(block.innerHTML)
+    // add the newly created element and its content into the DOM
+    banner.appendChild(block.cloneNode(true));
+    // banner.querySelector('a:last-child').innerHTML = block.innerHTML
+    // banner.querySelector('a:last-child').href = block.href
+      
+    });
+    bannerLength += bannerBlock;
+    console.log(bannerLength) 
+    extendBanner()
+  } else {
+    banner.classList.add('active')
+  }
+}
+
+
+
+  extendBanner()
+
+  console.log(bannerLength)
+
+})
+
+</script>

@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+
+section, header, footer {
+    padding: 2rem 2%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* buttons themes */
+
+.button{
+    border: 1px solid var(--colored-button-border);
+    background-color: var(--colored-button-bg);
+    color: var(--colored-button-text);
+}
+
+.button.featured
+
+.max-width{
+    max-width: 1000px;
+}
+

@@ -1,0 +1,106 @@
+---
+layout: default
+title: Homepage
+blocks: 
+    - id: text/rich-text-block
+      text_html: <h1>Welcome to your homepage! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum itaque qui obcaecati voluptatem quaerat facere, nesciunt eaque molestiae, cum, animi iure nulla assumenda maxime sequi consectetur sed adipisci mollitia alias?</h1>
+      height: 100vh
+      width: 33%
+      text-alignment: center
+      vertical-placement: center
+      text-align: center
+      scheme-color: dark
+    - id: banner/banner
+      text_html: <h1>Welcome to dans homepage! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum itaque qui obcaecati voluptatem quaerat facere, nesciunt eaque molestiae, cum, animi iure nulla assumenda maxime sequi consectetur sed adipisci mollitia alias?</h1>
+      height: 100vh
+      width: 33%
+      alignment: center
+      placement: center
+      text-align: center
+      image: https://picsum.photos/id/1025/600/400
+      overlay:
+        color: "#272"
+        opacity: 0
+    - id: tickers/ticker-banner-icon
+      banner-style:
+        direction: left
+        speed: 300
+        icon: /assets/images/icons8-car.gif
+      banner-message: 
+      - text: dan was here
+    - id: accordian
+      faq:
+        - question: Should everyone here move to SD?
+          answer-html: <p>Yes</p>
+        - question: Should everyone here move to SD?
+          answer-html: <p>Yes</p>
+        - question: Should everyone here move to SD?
+          answer-html: <p>Yes</p>
+    - id: filter/filterable-grid
+      filter-buttons: 
+        - old
+        - new
+        - modern
+      grid-item:
+        - image: https://picsum.photos/id/1076/600/400
+          alt:
+          caption:
+          category: old
+        - image: https://picsum.photos/id/1081/600/400
+          alt:
+          caption:
+          category: new
+        - image: https://picsum.photos/id/743/600/400
+          alt:
+          caption:
+          category: modern
+    - id: filter/filterable-menu
+      filter-buttons: 
+        - vegan
+        - vegetarian
+        - gluten free 
+        - dairy free
+        - nut free
+      menu-item:
+        - dish: teriyaki tempeh
+          category: vegan 'gluten free' 'dairy free'
+        - dish: shakshuka
+          category: vegetarian 
+        - dish: 
+          category: modern
+    - id: slider/slider-carousel
+      image-grid:
+        - image: https://picsum.photos/id/1025/600/400
+          alt:
+        - image: https://picsum.photos/id/1020/600/400
+          alt:
+        - image: https://picsum.photos/id/237/600/400
+          alt:
+        - image: https://picsum.photos/id/684/600/400?blur=5
+          alt:
+        - image: https://picsum.photos/id/598/600/400
+          alt:
+        - image: https://picsum.photos/id/642/600/400
+          alt:
+        - image: https://picsum.photos/id/642/600/400
+          alt:
+        - image: https://picsum.photos/id/211/600/400
+          alt:
+        - image: https://picsum.photos/id/1076/600/400
+          alt:
+    - id: text/rich-text-image-block
+      text_html: <h1>Cool image necxt door. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum itaque qui obcaecati voluptatem quaerat facere, nesciunt eaque molestiae, cum, animi iure nulla assumenda maxime sequi consectetur sed adipisci mollitia alias?</h1>
+      height: 100vh
+      width: 33%
+      text-alignment: left
+      vertical-placement: center
+      text-align: left
+      scheme-color: dark
+      image: https://picsum.photos/id/1076/600/400
+seo: 
+  title: title that appears in google results
+  description: small blurb below title in google. keep under 160 charachters for desktop and 120 for mobile
+  image: appears in google
+  favicon: little circle google
+  google-site-verification: ask tina - think google gives you a list of characters when you sign up for google analytics
+---

@@ -1,0 +1,54 @@
+ <!-- Footer -->
+ <footer class="grid lg:grid-cols-2 grid-cols-1 bg-dark py-6">
+
+  <div class="flex flex-col md:pl-12">
+      <a href="/" class="md:m-0 mx-auto">
+        <img src="{{site.data.site-settings.brand.primary_logo_path}}" alt="" class="inline-block object-center object-contain mx-auto mb-4 lg:h-28 h-16">
+      </a>
+
+    <p class="hidden lg:flex text-[0.6rem]"><span class="mr-1">©</span> <span id="year" class="mr-1"></span> Company Name. All Rights Reserved. Website by <a class="ml-1 underline text-[0.6rem]" href="https://coriandercreatives.com" target="_blank">Coriander Creatives</a></p>
+    </span>
+  </div>
+
+  <div class="hidden md:grid grid-cols-3 md:pl-12 lg:pl-0 items-center md:text-left md:items-start text-center justify-center mt-6">
+      <nav class="nav-items-col">
+        {% for item in site.data.navigation.footer limit:3 %}
+          <a href="{{item.nav_link}}" class="mb-6">{{item.nav_title}}</a>
+        {% endfor %}
+      </nav>
+      <nav class="nav-items-col">
+        {% for item in site.data.navigation.footer limit:3 offset: 3 %}
+          <a href="{{item.nav_link}}" class="mb-6">{{item.nav_title}}</a>
+        {% endfor %}
+        </nav>
+        <nav class="nav-items-col">
+          {% for item in site.data.navigation.footer limit:3 offset: 6 %}
+            <a href="{{item.nav_link}}" class="mb-6">{{item.nav_title}}</a>
+          {% endfor %}
+        </nav>
+  </div>
+
+    <!-- mobile nav -->
+    <div class="grid lg:hidden">
+      <div class="text-center md:hidden grid min-h-[5vh]">
+        <nav class="nav-items-col">
+          {% for item in site.data.navigation.footer %}
+          <a href="{{item.nav_link}}" class="mb-4">{{item.nav_title}}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+
+    <div class="lg:hidden col-span-full md:text-left md:pl-12 text-center mb-4">
+      <span class="text-[0.6rem]">© <span id="year-mob"></span> Company Name. All Rights Reserved. <br class="md:hidden"> Website by <a class="underline text-[0.6rem]" href="https://klioh.com" target="_blank">Klioh Studio</a>
+      </span>
+  </div>
+    <!-- end of mobile nav -->
+
+    
+    <!-- <div class="col-span-full flex justify-center items-center space-x-6 mb-4">
+
+      {% include default/social-icons.html %}
+
+    </div> -->
+</footer>

@@ -1,0 +1,28 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto grid grid-cols-2">
+    <div class="flex content-mover ">
+      <div class="content-block">
+        {{block.text_html}}
+      </div>
+    </div>
+    <div>
+      <img src="{{block.image}}" width="400" height="600">
+    </div>
+  </div>
+</section>
+
+<style>
+
+  #section-{{forloop.index}} .content-mover{
+    min-height:{{block.height}};
+    justify-content: {{block.text-alignment}};
+    align-items: {{block.vertical-placement}};
+    text-align: {{block.text-align}}
+  }
+
+  #section-{{forloop.index}} .content-block {
+    width:{{block.width}};
+  }
+
+
+</style>

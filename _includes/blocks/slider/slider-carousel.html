@@ -1,0 +1,10 @@
+<section id="section-{{forloop.index}}" class="">
+  
+  <h2>Slider heading</h2>
+  
+  <div class="responsive-slider">
+    {% for item in block.image-grid %}
+    <img src="{{item.image}}">
+    {% endfor %}
+  </div>
+</section>
