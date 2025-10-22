@@ -1,7 +1,19 @@
 # this is not page specific but site wide as a back up in case client adds new page without SEO, page specific in front matter
-title: title that appears in google results
-description: small blurb below title in google. keep under 160 charachters for desktop and 120 for mobile
-image: appears in google
-favicon: little circle google
+title: Sage & Stone Wellness | Holistic Massage Therapy & Relaxation in Edinburgh
+description: Relax, restore, and rebalance with holistic massage and healing treatments designed to nurture your body, mind, and soul.
+image: /assets/images/splash-sands.jpeg
+favicon: /assets/images/ss-favicon.svg
 google-site-verification: ask tina - think google gives you a list of characters when you sign up for google analytics
-keywords:
+keywords: 
+    - massage therapy Edinburgh
+    - holistic wellness Edinburgh
+    - relaxation treatments Edinburgh
+    - stress relief massage Edinburgh
+    - deep tissue massage Edinburgh
+    - self-care Edinburgh
+    - massage in edinburgh
+    - massage in scotland
+    - natural therapies Edinburgh
+    - sage and stone wellness
+    - therapeutic massage Edinburgh
+    - spa treatments Edinburgh
