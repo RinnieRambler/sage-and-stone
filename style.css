@@ -31,3 +31,40 @@ section, header, footer {
     max-width: 1000px;
 }
 
+/* cookie banner */
+
+#cookie-notice {
+    position: fixed;
+    inset: auto 0 0 0; /* bottom full-width */
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    z-index: 9999;
+  }
+  #cookie-notice.is-hidden { display: none; }
+  #cookie-notice .actions button {
+    margin: 0 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #cookie-notice [data-action="accept"] {
+    background: #27ae60;
+    color: #fff;
+  }
+  #cookie-notice [data-action="decline"] {
+    background: #e74c3c;
+    color: #fff;
+  }
+
+
+.image-overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 166, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

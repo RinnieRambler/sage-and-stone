@@ -478,11 +478,17 @@ video {
 .inset-0 {
     inset: 0px;
 }
+.bottom-0 {
+    bottom: 0px;
+}
 .left-0 {
     left: 0px;
 }
 .right-0 {
     right: 0px;
+}
+.top-0 {
+    top: 0px;
 }
 .top-2 {
     top: 0.5rem;
@@ -495,6 +501,9 @@ video {
 }
 .col-span-full {
     grid-column: 1 / -1;
+}
+.m-5 {
+    margin: 1.25rem;
 }
 .mx-auto {
     margin-left: auto;
@@ -536,6 +545,9 @@ video {
 .h-full {
     height: 100%;
 }
+.h-screen {
+    height: 100vh;
+}
 .max-h-0 {
     max-height: 0px;
 }
@@ -550,6 +562,9 @@ video {
 }
 .flex-shrink {
     flex-shrink: 1;
+}
+.flex-grow {
+    flex-grow: 1;
 }
 .rotate-90 {
     --tw-rotate: 90deg;
@@ -573,6 +588,9 @@ video {
 .items-center {
     align-items: center;
 }
+.items-stretch {
+    align-items: stretch;
+}
 .justify-center {
     justify-content: center;
 }
@@ -593,6 +611,9 @@ video {
 .whitespace-pre {
     white-space: pre;
 }
+.rounded-full {
+    border-radius: 9999px;
+}
 .border {
     border-width: 1px;
 }
@@ -612,9 +633,19 @@ video {
     --tw-border-opacity: 1;
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
+.bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-cover {
+    background-size: cover;
+}
+.bg-center {
+    background-position: center;
 }
 .object-contain {
     -o-object-fit: contain;
@@ -628,8 +659,14 @@ video {
     -o-object-position: center;
        object-position: center;
 }
+.p-10 {
+    padding: 2.5rem;
+}
 .p-2 {
     padding: 0.5rem;
+}
+.p-3 {
+    padding: 0.75rem;
 }
 .p-5 {
     padding: 1.25rem;
@@ -638,6 +675,14 @@ video {
     padding-left: 0px;
     padding-right: 0px;
 }
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 .py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -645,8 +690,23 @@ video {
 .text-center {
     text-align: center;
 }
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+}
 .text-\[0\.6rem\] {
     font-size: 0.6rem;
+}
+.font-semibold {
+    font-weight: 600;
+}
+.text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .underline {
     text-decoration-line: underline;
@@ -655,9 +715,7 @@ video {
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
@@ -692,9 +750,49 @@ section, header, footer {
     max-width: 1000px;
 }
 
+/* cookie banner */
+
+#cookie-notice {
+    position: fixed;
+    inset: auto 0 0 0; /* bottom full-width */
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    z-index: 9999;
+  }
+  #cookie-notice.is-hidden { display: none; }
+  #cookie-notice .actions button {
+    margin: 0 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #cookie-notice [data-action="accept"] {
+    background: #27ae60;
+    color: #fff;
+  }
+  #cookie-notice [data-action="decline"] {
+    background: #e74c3c;
+    color: #fff;
+  }
+
+
+.image-overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 166, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .group:hover .group-hover\:block {
     display: block;
 }
+
 
 @media (min-width: 768px) {
     .md\:m-0 {
@@ -717,6 +815,7 @@ section, header, footer {
     }
 }
 
+
 @media (min-width: 1024px) {
     .lg\:flex {
         display: flex;
@@ -734,4 +833,3 @@ section, header, footer {
         padding-left: 0px;
     }
 }
-
