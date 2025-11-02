@@ -583,6 +583,9 @@ video {
 .ml-2 {
     margin-left: 0.5rem;
 }
+.ml-36 {
+    margin-left: 9rem;
+}
 .block {
     display: block;
 }
@@ -707,6 +710,18 @@ video {
 }
 .gap-3 {
     gap: 0.75rem;
+}
+.gap-28 {
+    gap: 7rem;
+}
+.gap-32 {
+    gap: 8rem;
+}
+.gap-40 {
+    gap: 10rem;
+}
+.gap-36 {
+    gap: 9rem;
 }
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
@@ -857,6 +872,21 @@ video {
 .pl-16 {
     padding-left: 4rem;
 }
+.pl-24 {
+    padding-left: 6rem;
+}
+.pl-20 {
+    padding-left: 5rem;
+}
+.pl-36 {
+    padding-left: 9rem;
+}
+.pl-32 {
+    padding-left: 8rem;
+}
+.pl-28 {
+    padding-left: 7rem;
+}
 .text-left {
     text-align: left;
 }
@@ -888,6 +918,14 @@ video {
     font-size: 3rem;
     line-height: 1;
 }
+.text-sm {
+    font-size: 0.875rem;;
+    line-height: 1.2;
+}
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
 .font-semibold {
     font-weight: 600;
 }
@@ -911,6 +949,10 @@ video {
 }
 .text-white\/90 {
     color: rgb(255 255 255 / 0.9);
+}
+.text-gold {
+    --tw-text-opacity: 1;
+    color: rgb(191 171 98 / var(--tw-text-opacity));
 }
 .underline {
     text-decoration-line: underline;
@@ -1019,6 +1061,16 @@ section, header, footer {
 }
 
 
+.hover\:text-gold\/20:hover {
+    color: rgb(191 171 98 / 0.2);
+}
+
+
+.hover\:text-gold\/40:hover {
+    color: rgb(191 171 98 / 0.4);
+}
+
+
 .hover\:opacity-90:hover {
     opacity: 0.9;
 }
@@ -1094,6 +1146,12 @@ section, header, footer {
     .md\:ml-0 {
         margin-left: 0px;
     }
+    .md\:mb-16 {
+        margin-bottom: 4rem;
+    }
+    .md\:mb-12 {
+        margin-bottom: 3rem;
+    }
     .md\:flex {
         display: flex;
     }
@@ -1155,6 +1213,10 @@ section, header, footer {
     .md\:text-5xl {
         font-size: 3rem;
         line-height: 1;
+    }
+    .md\:text-xl {
+        font-size: 1.25rem;
+        line-height: 1.2;
     }
 }
 
