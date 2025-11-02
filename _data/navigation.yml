@@ -10,10 +10,8 @@ header-links:
         url: 
       - text: choice 3
         url: 
-  - text: contact
-    url: /contact
-  - text: dan was here
-    url: /coolPlace
+  - text: 
+    url: 
 footer-links:
   - heading: List 1
     url:
