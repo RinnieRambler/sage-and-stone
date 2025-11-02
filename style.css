@@ -65,5 +65,5 @@ section, header, footer {
     height: 100vh;
     background-color: rgba(23, 23, 23, 0.5);
     display: flex;
-    align-items: center;
+    align-items: end;
 }
