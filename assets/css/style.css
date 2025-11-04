@@ -587,6 +587,9 @@ video {
 .min-h-screen {
     min-height: 100vh;
 }
+.min-h-\[100svh\] {
+    min-height: 100svh;
+}
 .w-4 {
     width: 1rem;
 }
@@ -697,11 +700,17 @@ video {
 .bg-cover {
     background-size: cover;
 }
+.bg-contain {
+    background-size: contain;
+}
 .bg-\[19\%_50\%\] {
     background-position: 19% 50%;
 }
 .bg-\[82\%_50\%\] {
     background-position: 82% 50%;
+}
+.bg-\[70\%_50\%\] {
+    background-position: 70% 50%;
 }
 .object-contain {
     -o-object-fit: contain;
@@ -797,6 +806,10 @@ video {
 .text-gold {
     --tw-text-opacity: 1;
     color: rgb(191 171 98 / var(--tw-text-opacity));
+}
+.text-\[\#6d765b\] {
+    --tw-text-opacity: 1;
+    color: rgb(109 118 91 / var(--tw-text-opacity));
 }
 .underline {
     text-decoration-line: underline;
@@ -962,6 +975,9 @@ section, header, footer {
     }
     .md\:items-start {
         align-items: flex-start;
+    }
+    .md\:bg-cover {
+        background-size: cover;
     }
     .md\:bg-center {
         background-position: center;
