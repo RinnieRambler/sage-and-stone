@@ -548,6 +548,15 @@ video {
 .mt-6 {
     margin-top: 1.5rem;
 }
+.mt-40 {
+    margin-top: 10rem;
+}
+.mt-2 {
+    margin-top: 0.5rem;
+}
+.mt-1 {
+    margin-top: 0.25rem;
+}
 .block {
     display: block;
 }
@@ -769,6 +778,9 @@ video {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
+.pt-40 {
+    padding-top: 10rem;
+}
 .text-left {
     text-align: left;
 }
@@ -957,6 +969,12 @@ section, header, footer {
     }
     .md\:mb-20 {
         margin-bottom: 5rem;
+    }
+    .md\:mt-0 {
+        margin-top: 0px;
+    }
+    .md\:mt-5 {
+        margin-top: 1.25rem;
     }
     .md\:flex {
         display: flex;
