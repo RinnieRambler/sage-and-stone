@@ -514,6 +514,15 @@ video {
 .top-5 {
     top: 1.25rem;
 }
+.left-32 {
+    left: 8rem;
+}
+.left-6 {
+    left: 1.5rem;
+}
+.left-8 {
+    left: 2rem;
+}
 .z-10 {
     z-index: 10;
 }
@@ -542,20 +551,14 @@ video {
 .mr-1 {
     margin-right: 0.25rem;
 }
+.mt-1 {
+    margin-top: 0.25rem;
+}
 .mt-5 {
     margin-top: 1.25rem;
 }
 .mt-6 {
     margin-top: 1.5rem;
-}
-.mt-40 {
-    margin-top: 10rem;
-}
-.mt-2 {
-    margin-top: 0.5rem;
-}
-.mt-1 {
-    margin-top: 0.25rem;
 }
 .block {
     display: block;
@@ -590,14 +593,14 @@ video {
 .max-h-0 {
     max-height: 0px;
 }
+.min-h-\[100svh\] {
+    min-height: 100svh;
+}
 .min-h-\[5vh\] {
     min-height: 5vh;
 }
 .min-h-screen {
     min-height: 100vh;
-}
-.min-h-\[100svh\] {
-    min-height: 100svh;
 }
 .w-4 {
     width: 1rem;
@@ -709,17 +712,14 @@ video {
 .bg-cover {
     background-size: cover;
 }
-.bg-contain {
-    background-size: contain;
-}
 .bg-\[19\%_50\%\] {
     background-position: 19% 50%;
 }
-.bg-\[82\%_50\%\] {
-    background-position: 82% 50%;
-}
 .bg-\[70\%_50\%\] {
     background-position: 70% 50%;
+}
+.bg-\[82\%_50\%\] {
+    background-position: 82% 50%;
 }
 .object-contain {
     -o-object-fit: contain;
@@ -778,9 +778,6 @@ video {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
-.pt-40 {
-    padding-top: 10rem;
-}
 .text-left {
     text-align: left;
 }
@@ -811,6 +808,10 @@ video {
 .leading-none {
     line-height: 1;
 }
+.text-\[\#6d765b\] {
+    --tw-text-opacity: 1;
+    color: rgb(109 118 91 / var(--tw-text-opacity));
+}
 .text-cream {
     --tw-text-opacity: 1;
     color: rgb(255 254 245 / var(--tw-text-opacity));
@@ -818,10 +819,6 @@ video {
 .text-gold {
     --tw-text-opacity: 1;
     color: rgb(191 171 98 / var(--tw-text-opacity));
-}
-.text-\[\#6d765b\] {
-    --tw-text-opacity: 1;
-    color: rgb(109 118 91 / var(--tw-text-opacity));
 }
 .underline {
     text-decoration-line: underline;
@@ -841,9 +838,6 @@ video {
 }
 .duration-1000 {
     transition-duration: 1000ms;
-}
-.text-shadow-sm {
-    text-shadow: 1px 1px  2px rgba(0,0,0,0.25);
 }
 
 /* Custom CSS */
@@ -970,9 +964,6 @@ section, header, footer {
     .md\:mb-20 {
         margin-bottom: 5rem;
     }
-    .md\:mt-0 {
-        margin-top: 0px;
-    }
     .md\:mt-5 {
         margin-top: 1.25rem;
     }
@@ -993,9 +984,6 @@ section, header, footer {
     }
     .md\:items-start {
         align-items: flex-start;
-    }
-    .md\:bg-cover {
-        background-size: cover;
     }
     .md\:bg-center {
         background-position: center;
