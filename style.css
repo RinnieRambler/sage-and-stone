@@ -67,3 +67,31 @@ section, header, footer {
     display: flex;
     align-items: end;
 }
+
+.icon-button {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.cta-button {
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
