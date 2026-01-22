@@ -596,11 +596,17 @@ video {
 .min-h-screen {
     min-height: 100vh;
 }
+.min-h-full {
+    min-height: 100%;
+}
 .w-4 {
     width: 1rem;
 }
 .w-full {
     width: 100%;
+}
+.w-\[50\%\] {
+    width: 50%;
 }
 .max-w-6xl {
     max-width: 72rem;
