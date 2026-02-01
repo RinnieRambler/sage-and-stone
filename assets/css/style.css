@@ -584,7 +584,7 @@ video {
 .h-24 {
     height: 6rem;
 }
-.h-\[2rem\] {
+.h-8 {
     height: 2rem;
 }
 .h-full {
@@ -616,6 +616,9 @@ video {
 }
 .w-4 {
     width: 1rem;
+}
+.w-auto {
+    width: auto;
 }
 .w-full {
     width: 100%;
@@ -873,6 +876,9 @@ video {
 }
 .duration-1000 {
     transition-duration: 1000ms;
+}
+.text-shadow {
+    text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
 }
 
 /* Custom CSS */
