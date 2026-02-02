@@ -48,7 +48,7 @@ title: Main Page
 
 <!---- image and text about section ---->
 
-<section id="about" class="p-20 min-h-full bg-cream" >
+<section id="about" class="p-36 min-h-full bg-cream" >
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-10">
             <div class="">
@@ -68,7 +68,7 @@ title: Main Page
 
 <section class="bg-brown min-h-full relative h-[520px] md:h-[640px] overflow-hidden">
 
-    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto"> <source src="{{'/assets/images/hero.mp4' | relative_url }}" type="video/mp4"> </video>
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata"> <source src="{{'assets/images/hero.mp4' | relative_url }}" type="video/mp4"> </video>
 
     <div class="absolute inset-0 bg-cream/10"> </div> 
     
@@ -93,13 +93,14 @@ title: Main Page
             </div>
         </div>
     </div>
+</section>
 
 <!---- scroll gallery - treatments ---->
 
 <section id="services" class="bg-cream p-20 min-h-full">
 
     <h3 class="text-golddark capitalize font-4xl">our treatments</h3>
-    <div class="grid grid-cols-5 gap-6 min-h-40 overflow-hidden">
+    <div class="grid grid-cols-5 gap-10 min-h-40 overflow-hidden text-golddark text-center">
         <div>
             <img class="aspect-portrait-tall object-scale-down" src="/assets/images/cream-banner.png">
             <p>SACRED HEADSPACE RITUAL</p>
@@ -121,7 +122,7 @@ title: Main Page
             <p>OUR TIME YOUR RITUAL</p>
         </div>
     </div>
-    <a class="cta-button border-2" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book now</a>
+    <a class="inline-flex items-center justify-center uppercase tracking-wide border-2 border-gold font-header-sans py-2 px-4 mr-2 md:px-12 md:my-10 md:mr-2 text-gold bg-cream rounded-full hover:bg-gold/80 hover:text-cream transition text-xs md:text-sm" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book now</a>
     
 
 </section>
@@ -130,17 +131,15 @@ title: Main Page
 
 <section id="founder" style="background-image: url('/assets/images/cream-banner.png')" class="bg-image min-h-full">
 
-    <div class="grid grid-cols-2 p-40 bg-cream min-h-80">
+    <div class="grid grid-cols-2 p-48 bg-cream min-h-80">
         <div>
-            <img>
+            <img class="w-full max-w-md aspect-portrait rounded-t-full" src="/assets/images/claire-headshot.JPG">
         </div>
-        <div class="text-golddark">
-            <h2>meet Claire</h2>
-            <p>With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.
-            <br>
-            Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.
-            <br>
-            Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, a</p>
+        <div class="text-golddark max-w-100">
+            <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-8 font-header-sans uppercase">meet Claire</h2>
+            <p class="leading-8 py-2">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
+            <p class="leading-8 py-2">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
+            <p class="leading-8 py-2">Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, and reconnection that lingers long after the treatment ends.</p>
         </div>
     </div>
 
@@ -148,10 +147,22 @@ title: Main Page
 
 <!---- text with CTA ---->
 
-<section>
+<section class="grid grid-cols-2 gap-10 p-20">
 
     <div>
-        <p></p>
+        <p>Imagine wandering through a Glen at sunrise <br>
+            —the scent of wild sage warming in the light,the touch of smooth river stones beneath your feet,the hush of nature settling into perfect harmony.
+            <br>
+            Here, the earth speaks in quiet ways:to breathe slower, to soften your shoulders,to return to the rhythm you were always meant 
+            to live in
+            <br>
+            At Sage & Stone Wellness, we honour these moments.We invite you to reconnect with the natural world, 
+            with your body,and with the steady, grounded peace that’s been 
+            waiting for you.
+            <br>
+            Come back to yourself.
+            <br>
+            Come back to the earth.</p>
     </div>
     <div>
         <h2>find a moment <br> to come back <br> to yourself</h2>
