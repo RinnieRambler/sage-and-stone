@@ -24,9 +24,9 @@ module.exports = {
     },
 
     fontFamily: {
-      'body-sans': ['archivo', 'ui-sans-serif'],
-      'header-sans': ['montserrat', 'ui-sans-serif'],
-      'serif': ['playfair display', 'ui-serif'],
+      'body-sans': ['futura', 'ui-sans-serif'],
+      'header-serif': ['cormorant garamond', 'ui-serif'],
+      'script': ['allura', 'ui-script'],
     },
 
     extend: {

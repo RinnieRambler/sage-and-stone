@@ -608,9 +608,6 @@ video {
 .min-h-40 {
     min-height: 40vh;
 }
-.min-h-50 {
-    min-height: 50vh;
-}
 .min-h-80 {
     min-height: 80vh;
 }
@@ -882,10 +879,6 @@ video {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-}
 .py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -907,12 +900,6 @@ video {
 }
 .align-middle {
     vertical-align: middle;
-}
-.font-header-sans {
-    font-family: montserrat, ui-sans-serif;
-}
-.font-serif {
-    font-family: playfair display, ui-serif;
 }
 .text-2xl {
     font-size: 1.5rem;
