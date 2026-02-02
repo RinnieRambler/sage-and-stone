@@ -33,7 +33,7 @@ module.exports = {
       colors: {
         'gold': '#BFAB62',
         'cream': '#FFFEF5',
-        'golddark': '#9c8c52',
+        'golddark': '#c3a94b',
         'brown': '#806550',
         'goldlight': '#e1d4af',
         'creamy': '#F0EBD8',
