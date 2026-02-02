@@ -34,8 +34,8 @@ module.exports = {
         'gold': '#BFAB62',
         'cream': '#FFFEF5',
         'golddark': '#9c8c52',
-        'yellowbright': '#FCCA46',
-        'offwhite': '#FFFEF9',
+        'brown': '#806550',
+        'goldlight': '#e1d4af',
         'creamy': '#F0EBD8',
       },
       lineHeight: {
