@@ -617,6 +617,9 @@ video {
 .min-h-40 {
     min-height: 40vh;
 }
+.min-h-50 {
+    min-height: 50vh;
+}
 .min-h-80 {
     min-height: 80vh;
 }
@@ -644,6 +647,9 @@ video {
 .w-full {
     width: 100%;
 }
+.max-w-100 {
+    max-width: 100%;
+}
 .max-w-3xl {
     max-width: 48rem;
 }
@@ -652,18 +658,6 @@ video {
 }
 .max-w-md {
     max-width: 28rem;
-}
-.max-w-28 {
-    max-width: 7rem;
-}
-.max-w-52 {
-    max-width: 13rem;
-}
-.max-w-96 {
-    max-width: 24rem;
-}
-.max-w-100 {
-    max-width: 100%;
 }
 .flex-shrink {
     flex-shrink: 1;
@@ -727,9 +721,6 @@ video {
 .gap-4 {
     gap: 1rem;
 }
-.gap-6 {
-    gap: 1.5rem;
-}
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -746,10 +737,6 @@ video {
 }
 .rounded-full {
     border-radius: 9999px;
-}
-.rounded-t-3xl {
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
 }
 .rounded-t-full {
     border-top-left-radius: 9999px;
@@ -857,8 +844,11 @@ video {
 .p-3 {
     padding: 0.75rem;
 }
-.p-40 {
-    padding: 10rem;
+.p-36 {
+    padding: 9rem;
+}
+.p-48 {
+    padding: 12rem;
 }
 .p-5 {
     padding: 1.25rem;
@@ -868,21 +858,6 @@ video {
 }
 .p-\[5vw\] {
     padding: 5vw;
-}
-.p-28 {
-    padding: 7rem;
-}
-.p-32 {
-    padding: 8rem;
-}
-.p-36 {
-    padding: 9rem;
-}
-.p-8 {
-    padding: 2rem;
-}
-.p-48 {
-    padding: 12rem;
 }
 .px-0 {
     padding-left: 0px;
@@ -932,6 +907,10 @@ video {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+.py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
 .py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -941,6 +920,9 @@ video {
 }
 .pb-2 {
     padding-bottom: 0.5rem;
+}
+.pb-8 {
+    padding-bottom: 2rem;
 }
 .pl-4 {
     padding-left: 1rem;
@@ -954,11 +936,11 @@ video {
 .pt-32 {
     padding-top: 8rem;
 }
-.pb-8 {
-    padding-bottom: 2rem;
-}
 .pt-6 {
     padding-top: 1.5rem;
+}
+.pb-5 {
+    padding-bottom: 1.25rem;
 }
 .text-left {
     text-align: left;
@@ -1023,18 +1005,16 @@ video {
 .leading-none {
     line-height: 1;
 }
-.leading-12 {
-    line-height: 3rem;
-}
-.leading-6 {
-    line-height: 1.5rem;
-}
 .tracking-wide {
     letter-spacing: 0.025em;
 }
 .text-\[\#6d765b\] {
     --tw-text-opacity: 1;
     color: rgb(109 118 91 / var(--tw-text-opacity));
+}
+.text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .text-cream {
     --tw-text-opacity: 1;

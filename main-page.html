@@ -77,20 +77,19 @@ title: Main Page
 
 </section>
 
-<!---------- testimonials section ---------->
+<!-------- Testimonials pull in from data file -------> 
 
-<section class="bg-goldlight">
-    <div class="text-center grid grid-cols-1">
-        <h2 class="py-10 text-cream text-5xl font-serif ">What our <span class="text-white font-serif italic font-semibold">clients</span> say</h2>
-        <div class="p-5p md:p-0">
-            <div class="slider text-center md:max-w-3xl mx-auto ">
-            {% for item in site.data.reviews limit:1 %}
-            <div class="flex justify-center items-center min-h-full m-4 p-[5vw]">
-                 <p class="text-cream">{{item.review}}</p>
-                 <p class="text-cream">{{item.name}}</p>
+
+<section class="bg-goldlight text-cream min-h-50">
+    <div class="p-5p text-center">
+        <h2 class="py-10 text-golddark text-5xl font-serif ">What our <span class="text-cream font-serif italic font-semibold">clients</span> say</h2>
+        <div class="slider text-center">
+        {% for item in site.data.reviews %}
+            <div>
+                <p class="p-5">{{item.review}}</p>
+                <p class="pb-10">- {{item.name}}</p>
             </div>
-            {% endfor %}
-            </div>
+        {% endfor %}
         </div>
     </div>
 </section>
