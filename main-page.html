@@ -54,7 +54,7 @@ title: Main Page
             <div class="">
                 <img class="w-full max-w-md aspect-portrait rounded-3xl" src="/assets/images/cream-banner.png">
             </div>
-            <div class="pr-5">
+            <div class="pr-5 sticky top-0">
                 <h1 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 py-6 font-header-sans uppercase">welcome to <br> sage & stone</h2>
                 <h2 class="text-golddark text-shadow text-lg sm:text-2xl md:text-3xl text-left pr-2 pb-10 font-script" >Why us?</h3>
                 <p class="text-golddark font-header-sans leading-8 ">At Sage & Stone Wellness, each treatment is a gentle pause - an opportunity to slow down, breathe deeply, and reconnect with yourself. Every session is thoughtfully designed to restore balance, ease tension, and bring you back to a place of calm and clarity.<br> Rooted in nature and inspired by the simple act of self-care, Sage & Stone offers a peaceful space to rest and realign - a reminder that taking time for yourself isn’t selfish, it’s essential.</p>
@@ -99,7 +99,7 @@ title: Main Page
 <section id="services" class="bg-cream p-20 min-h-full">
 
     <h3 class="text-golddark capitalize font-4xl">our treatments</h3>
-    <div class="grid grid-cols-5 gap-10 min-h-40 overflow-hidden text-golddark text-center">
+    <div class="grid grid-cols-3 gap-10 min-h-40 overflow-hidden text-golddark text-center slider">
         <div>
             <img class="aspect-portrait-tall object-scale-down" src="/assets/images/cream-banner.png">
             <p>SACRED HEADSPACE RITUAL</p>
@@ -134,7 +134,7 @@ title: Main Page
         <div>
             <img class="w-full max-w-md aspect-portrait rounded-t-full" src="/assets/images/claire-headshot.JPG">
         </div>
-        <div class="text-golddark max-w-100">
+        <div class="text-golddark max-w-100 sticky top-0">
             <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-8 font-header-sans uppercase">meet Claire</h2>
             <p class="leading-8 py-2">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
             <p class="leading-8 py-2">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
@@ -204,6 +204,17 @@ title: Main Page
         </div>
     </div> 
 
+</section>
+
+<!---FAQ Section (F)-->
+<section class="p-20 border-1 border-golddark">
+    {% for item in site.data.faqs %}
+    <div>
+      <button class="expandButton flex justify-between w-full bg-sand-mid border-coffee-mid border-1 p-8" data-target-button="{{forloop.index}}"><h2 class="text-left text-coffee">Q. {{item.question}}</h2></button>
+      <div class="p-8 expandable collapse bg-cream" data-target-more="{{forloop.index}}"><p class="text-coffee">A. {{item.answer}}</p>
+      </div>
+    </div>
+    {% endfor %}
 </section>
 
 <!---- map section ---->

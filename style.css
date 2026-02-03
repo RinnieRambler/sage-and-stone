@@ -94,3 +94,22 @@ section, header, footer {
   text-decoration: none;
   font-size: 1.4rem;
 }
+
+body .slick-next:before, body .slick-prev:before {
+  @apply text-golddark
+ }
+
+.expandButton span {
+  transition: all 3s;
+}
+
+.expandButton.active span{
+  transform: rotate(45deg);
+}
+
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: '#A58958';
+  color: white;
+}
