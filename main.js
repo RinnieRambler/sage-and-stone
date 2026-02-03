@@ -1,49 +1,61 @@
-// Step #1. Start with our constants to define all our buttons
-const buttons = document.querySelectorAll('.expandButton');
-const expandingSections = document.querySelectorAll('.expandable');
-
-console.log(buttons)
-// Step #2. Create a function that finds the element that was clicked
-// then finds the element next to it and removes the class of hidden
-function dropDownAnswer() {
-    
-    this.classList.toggle('active');
-    
-    let targetExpandableDiv = this.dataset.targetButton;
-    expandingSections.forEach(section => {
-        if (targetExpandableDiv == section.dataset.targetMore) {
-            section.classList.toggle('hidden');
-        }
-    })
-    
-    // Step #5. Now we get to something new. We are going to target an element
-    // based off of it's position relative to the triggering element. 
-    
-    // console.log(this.previousElementSibling);
-    // console.log(this.nextElementSibling);
-    
-    // Step #6. Using the this keyword we can target the section we want to appear
-    // and toggle the hidden class 
-    // this.nextElementSibling.classList.toggle('hidden');
-}
-
-// Step #3. We want to loop over all our buttons using forEach method
-buttons.forEach(button => {
-    console.log('got to here')
-    // Step #4. Add an event listener to each of them that triggers our function
-    button.addEventListener('click', dropDownAnswer)
-})
+// document.addEventListener('DOMContentLoaded', function () {
 
 
-$(document).ready(function(){
-$('.slider').slick({
-dots: true,
-infinite: true,
-speed: 300,
-slidesToShow: 1,
-adaptiveHeight: true
+//   // FAQ accordion
+// const faqButtons = document.querySelectorAll('.expandButton');
+
+// if (faqButtons.length) {
+//   faqButtons.forEach((btn) => {
+//     btn.addEventListener('click', (e) => {
+//       e.preventDefault();
+
+//       const key = btn.dataset.targetButton; // "1", "2", etc.
+//       const answer = document.querySelector(`[data-target-more="${key}"]`);
+
+//       if (!answer) return;
+
+//       // toggle visibility
+//       answer.classList.toggle('hidden');
+
+//       // optional: rotate icon if you add one later
+//       btn.classList.toggle('active');
+//     });
+//   });
+// }
+
+const faqButtons = document.querySelectorAll('.expandButton');
+
+faqButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const key = btn.dataset.targetButton;
+    console.log('FAQ clicked, key:', key);
+
+    const answer = document.querySelector(`[data-target-more="${key}"]`);
+    console.log('Answer found?', !!answer);
+
+    if (!answer) return;
+
+    answer.classList.toggle('hidden');
+    btn.classList.toggle('active');
+  });
 });
-});
+
+
+  // Reviews slider
+  if (window.jQuery && jQuery.fn.slick) {
+    const $slider = jQuery('.slider');
+    if ($slider.length) {
+      $slider.not('.slick-initialized').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+    }
+  };
 
 
 

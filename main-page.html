@@ -206,16 +206,21 @@ title: Main Page
 
 </section>
 
-<!---FAQ Section (F)-->
+<!---- -FAQ Section (F) ---->
 <section class="p-20 border-1 border-golddark">
-    {% for item in site.data.faqs %}
-    <div>
+
+    <h4 class="px-5 pb-20">let's answer your questions</h4>
+
+    {% for item in site.data.faq %}
+    <div class="bg-cream border-2 border-goldlight rounded-full">
       <button class="expandButton flex justify-between w-full bg-sand-mid border-coffee-mid border-1 p-8" data-target-button="{{forloop.index}}"><h2 class="text-left text-coffee">Q. {{item.question}}</h2></button>
-      <div class="p-8 expandable collapse bg-cream" data-target-more="{{forloop.index}}"><p class="text-coffee">A. {{item.answer}}</p>
-      </div>
     </div>
+      <div class="p-8 expandable hidden bg-goldlight border-2 rounded-full" data-target-more="{{forloop.index}}">
+        <p class="text-goldark">A. {{item.answer}}</p>
+      </div>
     {% endfor %}
 </section>
+  
 
 <!---- map section ---->
 
