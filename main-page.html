@@ -171,52 +171,18 @@ title: Main Page
 
 </section>
 
-<!---- FAQ ---->
-
-<section class="bg-goldlight p-20">
-
-    <h4>let's answer your questions</h4>
-
-    <div>
-        <div>
-            <p>Q. This si a question</p>
-            <p>A. This is the answer</p>
-        </div>
-        <div>
-            <p>Q. This si a question</p>
-            <p>A. This is the answer</p>
-        </div>
-        <div>
-            <p>Q. This si a question</p>
-            <p>A. This is the answer</p>
-        </div>
-        <div>
-            <p>Q. This si a question</p>
-            <p>A. This is the answer</p>
-        </div>
-        <div>
-            <p>Q. This si a question</p>
-            <p>A. This is the answer</p>
-        </div>
-        <div>
-            <p>Q. This si a question</p>
-            <p>A. This is the answer</p>
-        </div>
-    </div> 
-
-</section>
 
 <!---- -FAQ Section (F) ---->
-<section class="p-20 border-1 border-golddark">
+<section class="p-40 border-1 border-golddark bg-goldlight">
 
-    <h4 class="px-5 pb-20">let's answer your questions</h4>
+    <h4 class="px-2 pb-20 capitalize text-2xl text-brown">let's answer your questions</h4>
 
     {% for item in site.data.faq %}
     <div class="bg-cream border-2 border-goldlight rounded-full">
-      <button class="expandButton flex justify-between w-full bg-sand-mid border-coffee-mid border-1 p-8" data-target-button="{{forloop.index}}"><h2 class="text-left text-coffee">Q. {{item.question}}</h2></button>
+      <button class="expandButton flex justify-between w-full  border-1 p-4" data-target-button="{{forloop.index}}"><h2 class="text-left text-coffee">Q. {{item.question}}</h2></button>
     </div>
-      <div class="p-8 expandable hidden bg-goldlight border-2 rounded-full" data-target-more="{{forloop.index}}">
-        <p class="text-goldark">A. {{item.answer}}</p>
+      <div class="p-4 expandable hidden bg-brown/50 border-2 border-brown rounded-full" data-target-more="{{forloop.index}}">
+        <p class="text-cream">A. {{item.answer}}</p>
       </div>
     {% endfor %}
 </section>
@@ -226,14 +192,18 @@ title: Main Page
 
 <section id="find" class="bg-cream p-20 border-t-2 border-gold">
 
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 p-20">
         <div class="p-10">
             <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.522394786849!2d-3.2522955231054858!3d55.95764947316076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c779856b0d37%3A0x2399eb23e52f4180!2sRejuv%20Skin%20Clinic!5e0!3m2!1sen!2sus!4v1769024381390!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
-        <div class="py-10">
-            <h2>how to get to us</h2>
-            <p>parking</p>
-            <p>bus route</p>
+        <div class="py-10 pr-8 text-gold">
+            <h2 class="pb-10 capitalize text-2xl">how to get to us</h2>
+            
+            <h3 class="py-5 capitalize text-lg">parking</h3>
+            <p class="py-2">On-street parking may be available on Queensferry Road itself and nearby side streets, but restrictions apply during busy daytime hours</p>
+            <h3 class="py-5 capitalize text-lg">bus route</h3>
+            <p class="py-2">Lothian and Stagecoach buses stop on or near Queensferry Road, which is the main road where the clinic is located. Key routes serving stops close by include: 38, 43, 47 and X55/X59 express buses.</p>
+            <p>The closest stops are typically at Craigleith Road (about a 1 minute walk) or Groathill Road South (roughly 8–10 minutes on foot), depending on which direction you’re coming from.</p>
         </div>
     </div>
 
@@ -241,15 +211,15 @@ title: Main Page
 
 <!---- footer ---->
 
-<footer class="bg-cream min-h-40 border-t border-2 border-gold">
+<footer class="bg-cream min-h-40 border-t border-2 border-gold ">
 
     <div class="grid grid-cols-3 p-20">
         <div>
-            <img>
-            <h4 class="uppercase">sage & stone wellness</h4>
-            <p class="uppercase">rejuv skin clinic, 242 queensferry road, edinburgh, eh4 2bp</p>
-            <a href="tel:+447745321641">07745321641</a>
-            <a class="uppercase" href="mailto:info@sageandstonewellness.co.uk" target="_blank"> info@sageandstonewellness.co.uk</a>
+            <img src="">
+            <h4 class="uppercase text-gold">sage & stone wellness</h4>
+            <p class="uppercase text-gold">rejuv skin clinic, 242 queensferry road, edinburgh, eh4 2bp</p>
+            <a class="uppercase text-gold" href="mailto:info@sageandstonewellness.co.uk" target="_blank"> info@sageandstonewellness.co.uk</a>
+            <a class="text-gold" href="tel:+447745321641">07745321641</a>
         </div>
         <div class="flex justify-center items-end">
             <a class="bg-gold icon-button" target="_blank" rel="noopener" href="https://www.instagram.com/sageandstonewellnessedinburgh"><i class="fa-brands fa-instagram" aria-label="View us on Instagram"></i></a>
@@ -258,13 +228,13 @@ title: Main Page
         </div>
         <div>
             <a class="cta-button" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book</a>
-            <h5 class="uppercase">hours</h5>
-            <p>monday 10am - 8pm</p>
-            <h5 class="uppercase">specialities</h5>
-            <p>womens health, holistic health, therapeutic massage, wellbeing, relaxation</p>
+            <h5 class="uppercase text-gold">hours</h5>
+            <p class="text-gold">monday 10am - 8pm</p>
+            <h5 class="uppercase text-gold">specialities</h5>
+            <p class="text-gold">womens health, holistic health, therapeutic massage, wellbeing, relaxation</p>
             <div>
-                <a class="uppercase">find us</a>
-                <a class="uppercase">back to top</a>
+                <a class="uppercase text-gold">find us</a>
+                <a class="uppercase text-gold">back to top</a>
             </div>
         </div>
     </div>
