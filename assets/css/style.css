@@ -685,6 +685,9 @@ video {
 .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 .flex-col {
     flex-direction: column;
 }
@@ -720,12 +723,6 @@ video {
 }
 .gap-4 {
     gap: 1rem;
-}
-.gap-16 {
-    gap: 4rem;
-}
-.gap-36 {
-    gap: 9rem;
 }
 .gap-56 {
     gap: 14rem;
