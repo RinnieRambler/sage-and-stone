@@ -114,3 +114,21 @@ body .slick-next:before, body .slick-prev:before {
   background-color: '#A58958';
   color: white;
 }
+
+dialog{
+  margin: auto;
+}
+
+  dialog::backdrop{
+    background-color: #2727;
+  }
+
+  .closingX {
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+  }
+
+  .faq-sign::after {
+    content: "+";
+  }
