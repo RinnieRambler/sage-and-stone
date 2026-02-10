@@ -675,6 +675,9 @@ video {
 .max-w-\[260px\] {
     max-width: 260px;
 }
+.max-w-\[48rem\] {
+    max-width: 48rem;
+}
 .max-w-md {
     max-width: 28rem;
 }
@@ -817,9 +820,6 @@ video {
 .border-t-0 {
     border-top-width: 0px;
 }
-.border-t-2 {
-    border-top-width: 2px;
-}
 .border-black {
     --tw-border-opacity: 1;
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -865,9 +865,8 @@ video {
     --tw-bg-opacity: 1;
     background-color: rgb(191 171 98 / var(--tw-bg-opacity));
 }
-.bg-goldlight {
-    --tw-bg-opacity: 1;
-    background-color: rgb(225 212 175 / var(--tw-bg-opacity));
+.bg-goldlight\/50 {
+    background-color: rgb(225 212 175 / 0.5);
 }
 .bg-white {
     --tw-bg-opacity: 1;
@@ -930,9 +929,6 @@ video {
 .p-5p {
     padding: 5%;
 }
-.p-12 {
-    padding: 3rem;
-}
 .px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -993,6 +989,14 @@ video {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+.px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
 .pb-10 {
     padding-bottom: 2.5rem;
 }
@@ -1034,6 +1038,12 @@ video {
 }
 .pt-8 {
     padding-top: 2rem;
+}
+.pl-12 {
+    padding-left: 3rem;
+}
+.pl-16 {
+    padding-left: 4rem;
 }
 .text-left {
     text-align: left;
@@ -1280,6 +1290,7 @@ dialog{
 
   .faq-sign::after {
     content: "+";
+    color: #806550;
   }
 
   .hover\:border-2:hover {

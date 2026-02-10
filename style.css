@@ -131,4 +131,5 @@ dialog{
 
   .faq-sign::after {
     content: "+";
+    color: #806550;
   }

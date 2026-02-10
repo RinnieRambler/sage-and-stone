@@ -111,12 +111,12 @@ title: Main Page
 <!-------- Testimonials pull in from data file -------> 
 
 
-<section class="bg-goldlight text-cream min-h-50">
+<section class="bg-goldlight/50 text-cream min-h-50">
     <div class="p-5p text-center">
         <h2 class="py-10 text-golddark text-5xl font-serif ">What our <span class="text-cream font-serif italic font-semibold">clients</span> say</h2>
         <div class="slider text-center">
         {% for item in site.data.reviews %}
-            <div>
+            <div class="max-w-[48rem] text-golddark">
                 <p class="p-5">{{item.review}}</p>
                 <p class="pb-10">- {{item.name}}</p>
             </div>
@@ -204,27 +204,10 @@ title: Main Page
 
 </section>
 
-<!---- meet Claire ---->
-
-<section id="founder" style="background-image: url('/assets/images/cream-banner.png')" class="bg-image min-h-full">
-
-    <div class="grid grid-cols-2 p-48 bg-cream min-h-80">
-        <div>
-            <img class="w-full max-w-md aspect-portrait rounded-t-full" src="/assets/images/claire-headshot.JPG">
-        </div>
-        <div class="text-golddark max-w-100 h-fit sticky top-0">
-            <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-8 font-header-sans uppercase">meet Claire</h2>
-            <p class="leading-8 py-2">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
-            <p class="leading-8 py-2">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
-            <p class="leading-8 py-2">Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, and reconnection that lingers long after the treatment ends.</p>
-        </div>
-    </div>
-
-</section>
 
 <!----------Services Mobile ------->
 
-<section id="services" class="bg-cream p-20 min-h-full">
+<section id="services" class="bg-cream p-20 min-h-full md:hidden">
 
     <h3 class="text-golddark capitalize font-4xl pb-10 px-4">our treatments</h3>
     <div class="max-w-7xl mx-auto px-6">
@@ -318,7 +301,7 @@ title: Main Page
 
 <!---- text with CTA ---->
 
-<section class="grid grid-cols-2 gap-56 p-40">
+<section class="grid grid-cols-2 gap-56 p-40 bg-cream text-golddark ">
 
     <div>
         <p>Imagine wandering through a Glen at sunrise <br>
@@ -345,17 +328,17 @@ title: Main Page
 
 
 <!---- -FAQ Section (F) ---->
-<section class="p-40 border-1 border-golddark bg-goldlight">
+<section class="p-40  bg-goldlight/50">
 
     <h4 class="px-2 pb-20 capitalize text-2xl text-brown">let's answer your questions</h4>
 
     {% for item in site.data.faq %}
     <div class="bg-cream border-2 border-goldlight rounded-sm md:rounded-full flex justify-between items-center px-12 expandButton cursor-pointer"  data-target-button="{{forloop.index}}">
-      <button class=" flex justify-between w-full  border-1 p-4"><h2 class="text-left text-coffee">Q. {{item.question}}</h2></button>
+      <button class=" flex justify-between w-full  border-1 p-4"><h2 class="text-left text-brown">Q. {{item.question}}</h2></button>
       <span class="faq-sign"></span>
     </div>
-      <div class="p-4 expandable hidden bg-brown/50 border-2 border-brown rounded-full" data-target-more="{{forloop.index}}">
-        <p class="text-cream">A. {{item.answer}}</p>
+      <div class="justify-between w-full p-4 expandable hidden bg-brown/50 border-1 border-brown rounded-full" data-target-more="{{forloop.index}}">
+        <p class="text-left text-cream px-14">A. {{item.answer}}</p>
       </div>
     {% endfor %}
 </section>
@@ -363,7 +346,7 @@ title: Main Page
 
 <!---- map section ---->
 
-<section id="find" class="bg-cream p-20 border-t-2 border-gold">
+<section id="find" class="bg-cream p-20">
 
     <div class="grid grid-cols-2 p-20">
         <div class="p-10">
