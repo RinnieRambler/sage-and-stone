@@ -557,6 +557,10 @@ video {
     margin-left: auto;
     margin-right: auto;
 }
+.my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 .mb-10 {
     margin-bottom: 2.5rem;
 }
@@ -669,6 +673,9 @@ video {
 .min-h-screen {
     min-height: 100vh;
 }
+.min-h-20 {
+    min-height: 20vh;
+}
 .w-4 {
     width: 1rem;
 }
@@ -698,6 +705,18 @@ video {
 }
 .max-w-md {
     max-width: 28rem;
+}
+.max-w-\[5rem\] {
+    max-width: 5rem;
+}
+.max-w-\[10rem\] {
+    max-width: 10rem;
+}
+.max-w-\[24rem\] {
+    max-width: 24rem;
+}
+.max-w-\[18rem\] {
+    max-width: 18rem;
 }
 .flex-shrink {
     flex-shrink: 1;
@@ -920,6 +939,9 @@ video {
 .bg-left-top {
     background-position: left top;
 }
+.bg-center {
+    background-position: center;
+}
 .object-contain {
     -o-object-fit: contain;
        object-fit: contain;
@@ -1068,6 +1090,14 @@ video {
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 .pb-10 {
     padding-bottom: 2.5rem;
 }
@@ -1130,6 +1160,21 @@ video {
 }
 .pb-24 {
     padding-bottom: 6rem;
+}
+.pt-10 {
+    padding-top: 2.5rem;
+}
+.pt-14 {
+    padding-top: 3.5rem;
+}
+.pr-4 {
+    padding-right: 1rem;
+}
+.pl-2 {
+    padding-left: 0.5rem;
+}
+.pt-12 {
+    padding-top: 3rem;
 }
 .text-left {
     text-align: left;
@@ -1517,6 +1562,10 @@ dialog{
         margin-top: 1.25rem;
         margin-bottom: 1.25rem;
     }
+    .md\:mx-0 {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .md\:mb-12 {
         margin-bottom: 3rem;
     }
@@ -1528,6 +1577,9 @@ dialog{
     }
     .md\:mt-5 {
         margin-top: 1.25rem;
+    }
+    .md\:block {
+        display: block;
     }
     .md\:flex {
         display: flex;
@@ -1547,14 +1599,26 @@ dialog{
     .md\:h-\[640px\] {
         height: 640px;
     }
+    .md\:min-h-90 {
+        min-height: 90vh;
+    }
+    .md\:max-w-\[48rem\] {
+        max-width: 48rem;
+    }
     .md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .md\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+    .md\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
     .md\:items-start {
         align-items: flex-start;
+    }
+    .md\:justify-end {
+        justify-content: flex-end;
     }
     .md\:rounded-full {
         border-radius: 9999px;
@@ -1562,15 +1626,60 @@ dialog{
     .md\:bg-center {
         background-position: center;
     }
+    .md\:bg-left-top {
+        background-position: left top;
+    }
     .md\:p-\[1rem\] {
         padding: 1rem;
     }
     .md\:p-\[4rem\] {
         padding: 4rem;
     }
+    .md\:p-36 {
+        padding: 9rem;
+    }
+    .md\:p-48 {
+        padding: 12rem;
+    }
+    .md\:p-24 {
+        padding: 6rem;
+    }
+    .md\:p-20 {
+        padding: 5rem;
+    }
+    .md\:p-4 {
+        padding: 1rem;
+    }
+    .md\:p-0 {
+        padding: 0px;
+    }
     .md\:px-12 {
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+    .md\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .md\:px-20 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .md\:px-14 {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+    .md\:py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .md\:px-40 {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    .md\:py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
     .md\:pl-12 {
         padding-left: 3rem;
@@ -1578,8 +1687,23 @@ dialog{
     .md\:pl-\[2\.5rem\] {
         padding-left: 2.5rem;
     }
+    .md\:pb-0 {
+        padding-bottom: 0px;
+    }
+    .md\:pt-0 {
+        padding-top: 0px;
+    }
+    .md\:pr-8 {
+        padding-right: 2rem;
+    }
+    .md\:pb-10 {
+        padding-bottom: 2.5rem;
+    }
     .md\:text-left {
         text-align: left;
+    }
+    .md\:text-right {
+        text-align: right;
     }
     .md\:text-3xl {
         font-size: 1.875rem;
