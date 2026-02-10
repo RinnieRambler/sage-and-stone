@@ -764,6 +764,12 @@ video {
 .gap-6 {
     gap: 1.5rem;
 }
+.gap-48 {
+    gap: 12rem;
+}
+.gap-40 {
+    gap: 10rem;
+}
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -929,6 +935,9 @@ video {
 .p-5p {
     padding: 5%;
 }
+.p-56 {
+    padding: 14rem;
+}
 .px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -997,6 +1006,34 @@ video {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
 }
+.px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+.px-48 {
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+.px-56 {
+    padding-left: 14rem;
+    padding-right: 14rem;
+}
+.px-52 {
+    padding-left: 13rem;
+    padding-right: 13rem;
+}
+.px-36 {
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
 .pb-10 {
     padding-bottom: 2.5rem;
 }
@@ -1044,6 +1081,21 @@ video {
 }
 .pl-16 {
     padding-left: 4rem;
+}
+.pb-4 {
+    padding-bottom: 1rem;
+}
+.pt-4 {
+    padding-top: 1rem;
+}
+.pb-12 {
+    padding-bottom: 3rem;
+}
+.pb-16 {
+    padding-bottom: 4rem;
+}
+.pb-24 {
+    padding-bottom: 6rem;
 }
 .text-left {
     text-align: left;
@@ -1118,8 +1170,17 @@ video {
 .leading-relaxed {
     line-height: 1.625;
 }
+.leading-12 {
+    line-height: 3rem;
+}
+.leading-10 {
+    line-height: 2.5rem;
+}
 .tracking-wide {
     letter-spacing: 0.025em;
+}
+.tracking-wider {
+    letter-spacing: 0.05em;
 }
 .text-\[\#6d765b\] {
     --tw-text-opacity: 1;
@@ -1146,6 +1207,21 @@ video {
 }
 .underline {
     text-decoration-line: underline;
+}
+.shadow-sm {
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-golddark {
+    --tw-shadow-color: #c3a94b;
+    --tw-shadow: var(--tw-shadow-colored);
+}
+.outline-1 {
+    outline-width: 1px;
+}
+.outline-golddark {
+    outline-color: #c3a94b;
 }
 .filter {
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
