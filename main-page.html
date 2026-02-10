@@ -129,7 +129,7 @@ title: Main Page
 
 <section id="services" class="bg-cream p-20 min-h-full">
 
-    <h3 class="text-golddark capitalize text-3xl pb-24 px-36 ">our treatments</h3>
+    <h3 class="text-golddark capitalize text-3xl pb-24 px-36 mr-2 ">our treatments</h3>
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex gap-6 lg:gap-8 min-h-40 overflow-x-auto scroll-smooth snap-x snap-mandatory text-golddark text-center pr-6">
             <div class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
@@ -290,9 +290,9 @@ title: Main Page
         </div>
         <div class="text-golddark max-w-100 h-fit sticky top-0">
             <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-8 font-header-sans uppercase">meet Claire</h2>
-            <p class="leading-8 py-2">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
-            <p class="leading-8 py-2">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
-            <p class="leading-8 py-2">Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, and reconnection that lingers long after the treatment ends.</p>
+            <p class="leading-8 py-2 font-body-sans">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
+            <p class="leading-8 py-2 font-body-sans">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
+            <p class="leading-8 py-2 font-body-sans">Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, and reconnection that lingers long after the treatment ends.</p>
         </div>
     </div>
 
@@ -301,25 +301,27 @@ title: Main Page
 
 <!---- text with CTA ---->
 
-<section class="grid grid-cols-2 gap-40 p-56 bg-cream text-golddark">
+<section class="  bg-cream text-golddark">
+    <div class="grid grid-cols-12 py-20 px-8 mx-auto max-w-6xl">
+        <div class="font-body-sans col-span-6" data-aos="fade-up">
+            <p class="leading-8 pb-4 capitalize">Imagine wandering through a Glen at sunrise <br> — <br>the scent of wild sage warming in the light,<br>the touch of smooth river stones beneath your feet,<br>the hush of nature settling into perfect harmony.</p>
 
-    <div class="font-body-sans">
-        <p class="leading-8 pb-4 capitalize">Imagine wandering through a Glen at sunrise <br> — <br>the scent of wild sage warming in the light,<br>the touch of smooth river stones beneath your feet,<br>the hush of nature settling into perfect harmony.</p>
-
-        <p class="leading-8 pb-4 capitalize">Here, the earth speaks in quiet ways.<br>to breathe slower,to soften your shoulders,<br>to return to the rhythm you were always meant to live in</p>
-        
-        <p class="leading-8 pb-4 capitalize">At Sage & Stone Wellness, we honour these moments.<br>We invite you to reconnect with the natural world,<br> 
-            with your body,<br>and with the steady, grounded peace that’s been 
-            waiting for you.</p>
-        <p class="leading-8 pb-4 capitalize">
-            Come back to yourself.
-        </p>
-        <p class="leading-8 pb-4 capitalize">
-            Come back to the earth.</p>
-    </div>
-    <div class="text-right font-body-sans">
-        <h2 class="text-2xl pb-6 uppercase leading-10">find a moment <br> to come back <br> to yourself</h2>
-        <button class="border-gold border-2 uppercase text-gold py-2 px-4 rounded-full" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book now</button>
+            <p class="leading-8 pb-4 capitalize">Here, the earth speaks in quiet ways.<br>to breathe slower,to soften your shoulders,<br>to return to the rhythm you were always meant to live in</p>
+            
+            <p class="leading-8 pb-4 capitalize">At Sage & Stone Wellness, we honour these moments.<br>We invite you to reconnect with the natural world,<br> 
+                with your body,<br>and with the steady, grounded peace that’s been 
+                waiting for you.</p>
+            <p class="leading-8 pb-4 capitalize">
+                Come back to yourself.
+            </p>
+            <p class="leading-8 pb-4 capitalize">
+                Come back to the earth.</p>
+        </div>
+        <div class="col-span-2"></div>
+        <div class="text-right font-body-sans col-span-4 mr-4" data-aos="fade-left" data-aos-deley="250">
+            <h2 class="text-2xl pb-10 uppercase leading-10">find a moment <br> to come back <br> to yourself</h2>
+            <a class="border-gold border-2 uppercase text-xs md:text-sm text-gold py-2 px-4 rounded-full transition hover:bg-gold/80 hover:text-cream" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book now</a>
+        </div>
     </div>
    
 
@@ -327,21 +329,22 @@ title: Main Page
 
 
 <!---- -FAQ Section (F) ---->
-<section class="p-40  bg-goldlight/50 font-body-sans">
+<section class="p-24 bg-goldlight/50 font-body-sans">
 
-    <h4 class="px-2 pb-20 capitalize text-2xl text-brown">let's answer your questions</h4>
-    <div class="space-y-4">
-        {% for item in site.data.faq %}
-        <div class="bg-cream border-2 border-goldlight rounded-sm md:rounded-full flex justify-between items-center px-12 expandButton cursor-pointer"  data-target-button="{{forloop.index}}">
-            <button class=" flex justify-between w-full  border-1 p-4"><h2 class="text-left text-brown tracking-wider">Q. {{item.question}}</h2></button>
-            <span class="faq-sign"></span>
+    <div class="p-20">
+        <h4 class="px-2 pb-20 capitalize text-2xl text-brown">let's answer your questions</h4>
+        <div class="space-y-4">
+            {% for item in site.data.faq %}
+            <div class="bg-cream border-2 border-goldlight rounded-sm md:rounded-full flex justify-between items-center px-12 expandButton cursor-pointer"  data-target-button="{{forloop.index}}">
+                <button class=" flex justify-between w-full  border-1 p-4"><h2 class="text-left text-brown tracking-wider">Q. {{item.question}}</h2></button>
+                <span class="faq-sign"></span>
+            </div>
+            <div class="justify-between w-full p-4 expandable hidden bg-brown/50 border-1 border-brown rounded-full" data-target-more="{{forloop.index}}">
+                <p class="text-left text-cream leading-8 tracking-wider px-14">A. {{item.answer}}</p>
+            </div>
+            {% endfor %}
         </div>
-        <div class="justify-between w-full p-4 expandable hidden bg-brown/50 border-1 border-brown rounded-full" data-target-more="{{forloop.index}}">
-            <p class="text-left text-cream leading-8 tracking-wider px-14">A. {{item.answer}}</p>
-        </div>
-        {% endfor %}
     </div>
-
 </section>
   
 
@@ -354,7 +357,7 @@ title: Main Page
             <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.522394786849!2d-3.2522955231054858!3d55.95764947316076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c779856b0d37%3A0x2399eb23e52f4180!2sRejuv%20Skin%20Clinic!5e0!3m2!1sen!2sus!4v1769024381390!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
         <div class="py-10 pr-8 text-gold">
-            <h2 class="pb-10 capitalize text-4xl font-header-serif">how to get to us</h2>
+            <h2 class="pb-10 capitalize text-4xl font-header-serif ">how to get to us</h2>
             
             <h3 class="py-5 capitalize text-lg font-body-sans">parking</h3>
             <p class="py-2 font-body-sans">On-street parking may be available on Queensferry Road itself and nearby side streets, but restrictions apply during busy daytime hours</p>
@@ -373,17 +376,17 @@ title: Main Page
     <div class="grid grid-cols-3 px-40 py-20">
         <div>
             <a><img href="/index.html" src="/assets/images/sage-and-stone-logo-final-website.svg" class="h-32 w-auto "></a>
-            <h4 class="font-header-serif text-2xl uppercase text-gold pt-16 pb-6">sage & stone wellness</h4>
-            <p class="uppercase text-gold pb-6">rejuv skin clinic, 242 queensferry road, <br>edinburgh, eh4 2bp</p>
-            <a class="uppercase text-gold block pb-6" href="mailto:info@sageandstonewellness.co.uk" target="_blank"> info@sageandstonewellness.co.uk</a>
-            <a class="text-gold block" href="tel:+447745321641">07745321641</a>
+            <h4 class="font-header-serif text-3xl uppercase text-golddark text-shadow pt-16 pb-6">sage & stone wellness</h4>
+            <p class="uppercase text-gold pb-6 font-body-sans">rejuv skin clinic, 242 queensferry road, <br>edinburgh, eh4 2bp</p>
+            <a class="uppercase text-gold block pb-6 font-body-sans" href="mailto:info@sageandstonewellness.co.uk" target="_blank"> info@sageandstonewellness.co.uk</a>
+            <a class="text-gold block font-body-sans" href="tel:+447745321641">07745321641</a>
         </div>
         <div class="flex justify-center items-end mb-4">
             <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://www.instagram.com/sageandstonewellnessedinburgh"><i class="fa-brands fa-instagram" aria-label="View us on Instagram"></i></a>
             <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://www.facebook.com/share/1G2uiAwKTu/?mibextid=wwXlfr"><i class="fa-brands fa-facebook" aria-label="View us on Facebook"></i></a>
-            <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://wa.me.447745321641"><i class="fa-brands fa-whatsapp" aria-label="Chat with us on Whatsapp"></i></a>
+            <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://wa.me/447745321641"><i class="fa-brands fa-whatsapp" aria-label="Chat with us on Whatsapp"></i></a>
         </div>
-        <div>
+        <div class="font-body-sans">
             <div class="flex justify-end">
                 <a class="bg-gold rounded-full text-cream uppercase px-8 py-2" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book</a>
             </div>
@@ -402,7 +405,7 @@ title: Main Page
 
 </footer>
 
-<section class="bg-gold text-cream/80 text-sm">
+<section class="bg-gold text-cream/80 text-sm font-body-sans">
     <div>
         <p class="text-center">Copyright 2025. Sage and Stone Wellness. <a href="">Privacy Policy.</a> <a href="">Terms of Service.</a></p>
         <p class="text-center">Web Design by <a target="_blank" href="https://www.coriandercreatives.com">Coriander Creatives</a></p>
