@@ -61,7 +61,8 @@ title: Main Page
     <!----CONTENT ---->
     <div class="w-full max-w-3xl flex flex-col justify-start md:justify-end items-start px-2 md:px-6 py-6 md:p-[1rem] md:pl-[2.5rem] ">
 
-        <h1 class=" text-golddark text-shadow text-3xl sm:text-3xl md:text-5xl text-left font-header-serif pl-4 pt-32 font-header-sans uppercase leading-10">not just a massage - a return to yourself</h1>
+        <h1 class=" text-brown/80 text-3xl sm:text-3xl md:text-5xl text-left font-header-serif pl-4 pt-32 font-header-sans uppercase leading-10">not just a massage - a return to yourself</h1>
+        <h2 class="text-brown italic text-md md:text-xl font-header-serif pl-4 pt-4">Luxury Holistic Massage in Edinburgh</h2>
         <!-- <h3 class="text-golddark font-script text-4xl">holistic bodywork to restore calm, clarity and connection</h3> -->
         
         <!----- CTA row ---->
@@ -86,9 +87,10 @@ title: Main Page
                 <img class="w-full max-w-md aspect-portrait rounded-3xl" src="/assets/images/sage-treatment-room.PNG">
             </div>
             <div class="pr-5 pb-8 md:pb-0">
-                <h1 data-aos="fade-right" data-aos-duration="1500" class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 py-6 font-header-sans uppercase">welcome to <br> sage & stone</h2>
-                <h2 class="text-golddark text-shadow text-2xl md:text-4xl text-left pr-2 pb-10 font-script" >Why us?</h3>
-                <p class="text-golddark font-header-sans leading-8 pb-8 md:pb-0">At Sage & Stone Wellness, each treatment is a gentle pause - an opportunity to slow down, breathe deeply, and reconnect with yourself. Every session is thoughtfully designed to restore balance, ease tension, and bring you back to a place of calm and clarity.<br> Rooted in nature and inspired by the simple act of self-care, Sage & Stone offers a peaceful space to rest and realign - a reminder that taking time for yourself isn’t selfish, it’s essential.</p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-4 font-header-sans uppercase">welcome to <br> sage & stone</h2>
+                <h2 class="text-brown text-shadow text-2xl md:text-3xl text-left pr-2 pb-10 font-script" >Why us?</h3>
+                <p class="text-brown font-header-sans leading-8 pb-8 md:pb-2">At Sage & Stone Wellness, each treatment is a gentle pause - an opportunity to slow down, breathe deeply, and reconnect with yourself. 
+                <span class="text-golddark italic font-bold font-header-sans leading-8 pb-2 ">Every session is thoughtfully designed to restore balance, ease tension, and bring you back to a place of calm and clarity.</span> Rooted in nature and inspired by the simple act of self-care, Sage & Stone offers a peaceful spaceto rest and realign - a reminder that taking time for yourself isn’t selfish, it’s essential.</p>
                 <a class="inline-flex items-center justify-center uppercase tracking-wide border-2 border-gold font-header-sans py-2 px-4 mr-2 md:px-12 md:my-10 md:mr-2 text-gold bg-cream rounded-full hover:bg-gold/80 hover:text-cream transition text-xs md:text-sm" href="#founder">meet the founder</a>
             </div>
         </div>
@@ -102,7 +104,7 @@ title: Main Page
     <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata"> <source src="{{'assets/images/hero.mp4' }}" type="video/mp4"> </video>
 
     <div class="absolute inset-0 bg-cream/10"> </div> 
-    
+    <p class="text-brown text-3xl absolute bottom-32 left-1/2 -translate-x-1/2 z-10 inline-flex items-center justify-center tracking-wide font-script">Ready to experience it?</p>
     <a class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 inline-flex items-center justify-center uppercase tracking-wide font-header-sans py-3 px-8 text-cream bg-gold rounded-full hover:bg-gold/80 transition text-xs md:text-sm" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank" rel="noopener">book now</a>  
    
 
@@ -111,14 +113,14 @@ title: Main Page
 <!-------- Testimonials pull in from data file -------> 
 
 
-<section class="bg-goldlight/50 text-cream min-h-50">
+<section class="bg-goldlight/50  min-h-50">
     <div class="p-5p text-center">
-        <h2 class="py-10 text-golddark text-3xl md:text-5xl font-serif ">What our <span class="text-cream font-serif italic font-semibold">clients</span> say</h2>
+        <h2 class="py-10 text-golddark text-3xl md:text-5xl font-serif ">What our <span class="text-brown/50 font-serif italic font-semibold">clients</span> say</h2>
         <div class="slider text-center">
         {% for item in site.data.reviews %}
             <div class="max-w-[18rem] md:max-w-[48rem] text-golddark">
-                <p class="p-5">{{item.review}}</p>
-                <p class="pb-10">- {{item.name}}</p>
+                <p class="p-5 text-brown">{{item.review}}</p>
+                <p class="pb-10 text-golddark">- {{item.name}}</p>
             </div>
         {% endfor %}
         </div>
@@ -134,7 +136,7 @@ title: Main Page
         <div class="flex gap-6 lg:gap-8 min-h-40 overflow-x-auto scroll-smooth snap-x snap-mandatory text-golddark text-center pr-6">
             <div class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
                 <div class="relative">
-                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-golddark">
+                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-brown">
                         <div>
                             <p class="max-w-[260px] leading-relaxed text-sm mb-4">
                                 A massage like no other, this ritual combines deep stretching and sculpting techniques to release tension from the face, neck, and head. Meditative aromatherapy oils calm the senses while warm oil is gently poured through the hair for profound nourishment and relaxation.</p>
@@ -148,7 +150,7 @@ title: Main Page
             
             <div class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[32%]">
                 <div class="relative">
-                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-golddark">
+                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-brown"">
                         <div>
                             <p class="max-w-[260px] leading-relaxed text-sm mb-4">
                              Surrender to stillness with this deeply soothing full body ritual inspired by the healing traditions of Bali. Warm aromatic oils are gently poured over the body, followed by soft, rhythmic strokes that flow like waves across the skin. This slow, meditative massage calms the nervous system, quiets a busy mind, and invites a profound state of rest. </p>
@@ -162,7 +164,7 @@ title: Main Page
 
             <div class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[32%]">
                 <div class="relative">
-                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-golddark">
+                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-brown"">
                         <div>
                             <p class="max-w-[260px] text-sm leading-relaxed mb-4">
                             Root yourself in calm with this deeply restorative full body ritual designed to realign energy and restore harmony throughout the body. Warm basalt stones are placed on key chakra points, their heat gently easing muscle tension while encouraging energetic flow. Using aromatic oils from Shanti Wellness, your therapist performs slow, grounding massage techniques that calm the nervous system and nurture a profound sense of balance.</p>
@@ -176,7 +178,7 @@ title: Main Page
 
             <div class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[32%]">
                 <div class="relative">
-                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-golddark">
+                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-brown"">
                         <div>
                             <p class="max-w-[260px] text-sm leading-relaxed mb-4">This transformative treatment combines powerful deep-tissue techniques with guided stretching to unlock deep-rooted tension and restore equilibrium throughout the body. Expert moves target areas of muscular tightness, improving mobility, releasing built-up stress, and encouraging natural realignment.</p>
                             <p class="max-w-[260px] text-sm leading-relaxed">Ideal for those who train at the gym, practice sports, or carry chronic tension, this massage works beyond the surface to free the body, enhance recovery, and leave you feeling lighter, more flexible, and deeply restored..</p>
@@ -188,7 +190,7 @@ title: Main Page
             </div>
             <div class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[32%]">
                 <div class="relative">
-                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-golddark">
+                    <div class="absolute inset-0 flex items-center justify-center px-6 text-center text-brown"">
                         <div>
                             <p class="max-w-[260px] text-sm leading-relaxed mb-4">At Sage & Stone Wellness, we understand that every body and every day is different. Instead of choosing from a set menu, you simply select the amount of time you’d like to spend in treatment, and together we will create a personalised experience to suit your needs in that moment.</p>
                             <p class="max-w-[260px] text-sm leading-relaxed">Whether you are seeking deep muscular release, soothing relaxation, energy balance, or a combination of techniques, I will draw upon my full range of therapies to design a ritual that nurtures your body, calms your mind, and restores balance.</p>
@@ -317,7 +319,8 @@ title: Main Page
             <img class="w-full max-w-md aspect-portrait rounded-t-full" src="/assets/images/claire-headshot.JPG">
         </div>
         <div class="text-golddark max-w-100 h-fit sticky top-0">
-            <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-8 font-header-sans uppercase">meet Claire</h2>
+            <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl md:text-4xl text-left pr-2 pt-6 pb-2 font-header-sans uppercase">meet Claire</h2>
+            <h2 class="text-brown text-xl font-header-serif pb-8">20+ Years Experience | 5-Star Spa Specialist</h2>
             <p class="leading-8 py-2 font-body-sans">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
             <p class="leading-8 py-2 font-body-sans">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
             <p class="leading-8 py-2 font-body-sans">Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, and reconnection that lingers long after the treatment ends.</p>

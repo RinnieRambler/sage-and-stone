@@ -120,7 +120,7 @@ dialog{
 }
 
   dialog::backdrop{
-    background-color: #2727;
+    background-color: #FFFEF5;
   }
 
   .closingX {
