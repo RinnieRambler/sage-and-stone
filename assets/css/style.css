@@ -1331,6 +1331,7 @@ dialog{
 
   dialog::backdrop{
     background-color: #FFFEF5;
+    outline: #806550;
   }
 
   .closingX {
