@@ -1057,6 +1057,9 @@ video {
 .pr-6 {
     padding-right: 1.5rem;
 }
+.pr-64 {
+    padding-right: 16rem;
+}
 .pt-12 {
     padding-top: 3rem;
 }
@@ -1065,9 +1068,6 @@ video {
 }
 .pt-16 {
     padding-top: 4rem;
-}
-.pt-32 {
-    padding-top: 8rem;
 }
 .pt-4 {
     padding-top: 1rem;
@@ -1166,6 +1166,9 @@ video {
 .text-\[\#6d765b\] {
     --tw-text-opacity: 1;
     color: rgb(109 118 91 / var(--tw-text-opacity));
+}
+.text-black\/80 {
+    color: rgb(0 0 0 / 0.8);
 }
 .text-brown {
     --tw-text-opacity: 1;
@@ -1512,6 +1515,9 @@ dialog{
     .md\:p-0 {
         padding: 0px;
     }
+    .md\:p-10 {
+        padding: 2.5rem;
+    }
     .md\:p-48 {
         padding: 12rem;
     }
@@ -1573,6 +1579,9 @@ dialog{
     }
     .md\:pt-0 {
         padding-top: 0px;
+    }
+    .md\:pt-8 {
+        padding-top: 2rem;
     }
     .md\:text-left {
         text-align: left;
@@ -1674,8 +1683,14 @@ dialog{
     .lg\:pl-0 {
         padding-left: 0px;
     }
+    .lg\:pr-0 {
+        padding-right: 0px;
+    }
     .lg\:pt-0 {
         padding-top: 0px;
+    }
+    .lg\:pt-32 {
+        padding-top: 8rem;
     }
     .lg\:text-left {
         text-align: left;
@@ -1685,6 +1700,10 @@ dialog{
     }
     .lg\:text-4xl {
         font-size: 2.25rem;
+        line-height: 1;
+    }
+    .lg\:text-5xl {
+        font-size: 3rem;
         line-height: 1;
     }
 }
