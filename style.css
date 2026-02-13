@@ -117,17 +117,26 @@ body .slick-next:before, body .slick-prev:before {
 
 dialog{
   margin: auto;
+  border: 1px solid #806550;
+  position: relative;
 }
 
   dialog::backdrop{
     background-color: #FFFEF5;
-    outline: #806550;
+  }
+
+  dialog:focus, dialog:focus-visible {
+    outline: none;
   }
 
   .closingX {
     position: absolute;
-    top: 5vw;
-    right: 5vw;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   .faq-sign::after {

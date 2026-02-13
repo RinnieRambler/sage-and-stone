@@ -214,7 +214,7 @@ title: Main Page
     <h3 class="text-golddark capitalize font-4xl md:font-5xl pb-10 px-4">our treatments</h3>
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex gap-6 lg:gap-8 min-h-20 overflow-x-auto scroll-smooth snap-x snap-mandatory text-golddark text-center pr-6">
-            <div onclick="this.nextElementSibling.showModal()" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
+            <div onclick="openDialog(this)" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
                 <div class="relative">
                     <img class="relative aspect-portrait-tall rounded-full object-cover object-center hover:opacity-20 transition-all" src="/assets/images/headmassage_Preview.jpeg">
                 </div>
@@ -225,14 +225,13 @@ title: Main Page
                     <p class="max-w-[260px] leading-relaxed text-sm space-y-4 mb-4">
                         A massage like no other, this ritual combines deep stretching and sculpting techniques to release tension from the face, neck, and head. Meditative aromatherapy oils calm the senses while warm oil is gently poured through the hair for profound nourishment and relaxation.</p>
                         <p class="max-w-[260px] leading-relaxed text-sm space-y-4">Gua Sha massage restores flow and definition, while ice balls refresh lift, tones and revitalise the skin. Ideal for those experiencing TMD, tinnitus, or stress-related tightness from desk-based lifestyles, this ritual eases deep-rooted tension, clears mental fog, and leaves you feeling balanced, light, and renewed.</p>
-                  <!-- 
-                  4) Finally we add a closing button. This is just a span with an onclick event that will close the dialog.  
-                  -->
-                  <span class="closingX" onclick="this.parentElement.parentElement.close()">X</span>
+
+                  <!-- Adding a closing button. This is just a span with an onclick event that will close the dialog.  -->
+                  <span class="closingX" onclick="closeDialog(this)">X</span>
                 </div>
               </dialog>
             
-              <div onclick="this.nextElementSibling.showModal()" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
+              <div onclick="openDialog(this)" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
                 <div class="relative">
                     <img class="relative aspect-portrait-tall rounded-full object-cover object-center hover:opacity-20 transition-all" src="/assets/images/oilpour2_Preview.jpeg">
                 </div>
@@ -243,14 +242,12 @@ title: Main Page
                     <p class="max-w-[260px] leading-relaxed text-sm space-y-4 mb-4">
                         Surrender to stillness with this deeply soothing full body ritual inspired by the healing traditions of Bali. Warm aromatic oils are gently poured over the body, followed by soft, rhythmic strokes that flow like waves across the skin. This slow, meditative massage calms the nervous system, quiets a busy mind, and invites a profound state of rest.</p>
                         <p class="max-w-[260px] leading-relaxed text-sm space-y-4">The ritual includes a nurturing face and scalp treatment to heighten relaxation and release lingering tension. For those seeking deeper muscular relief, warm basalt stones may be incorporated—melting away tightness while the sublime oils of Shanti Wellness nourish the body and balance the senses.</p>
-                  <!-- 
-                  4) Finally we add a closing button. This is just a span with an onclick event that will close the dialog.  
-                  -->
-                  <span class="closingX" onclick="this.parentElement.parentElement.close()">X</span>
+                  <!-- Adding a closing button. This is just a span with an onclick event that will close the dialog.  -->
+                  <span class="closingX" onclick="closeDialog(this)">X</span>
                 </div>
             </dialog>
 
-            <div onclick="this.nextElementSibling.showModal()" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
+            <div onclick="openDialog(this)" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
                 <div class="relative">
                     <img class="relative aspect-portrait-tall rounded-full object-cover object-center hover:opacity-20 transition-all" src="/assets/images/hotstone_Preview.jpeg">
                 </div>
@@ -261,14 +258,12 @@ title: Main Page
                     <p class="max-w-[260px] leading-relaxed text-sm space-y-4 mb-4">
                         Root yourself in calm with this deeply restorative full body ritual designed to realign energy and restore harmony throughout the body. Warm basalt stones are placed on key chakra points, their heat gently easing muscle tension while encouraging energetic flow. Using aromatic oils from Shanti Wellness, your therapist performs slow, grounding massage techniques that calm the nervous system and nurture a profound sense of balance.</p>
                         <p class="max-w-[260px] leading-relaxed text-sm space-y-4">This ritual reconnects body, mind, and spirit—dissolving stress, grounding scattered energy, and awakening inner stillness. Perfect for those seeking deep release, chakra alignment, and a renewed connection to self.</p>
-                  <!-- 
-                  4) Finally we add a closing button. This is just a span with an onclick event that will close the dialog.  
-                  -->
-                  <span class="closingX" onclick="this.parentElement.parentElement.close()">X</span>
+                  <!-- Adding a closing button. This is just a span with an onclick event that will close the dialog.  -->
+                  <span class="closingX" onclick="closeDialog(this)">X</span>
                 </div>
             </dialog>
             
-            <div onclick="this.nextElementSibling.showModal()" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
+            <div onclick="openDialog(this)" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
                 <div class="relative">
                     <img class="relative aspect-portrait-tall rounded-full object-cover object-center hover:opacity-20 transition-all" src="/assets/images/deeptissue_Preview.jpeg">
                 </div>
@@ -279,14 +274,12 @@ title: Main Page
                     <p class="max-w-[260px] leading-relaxed text-sm space-y-4 mb-4">
                         This transformative treatment combines powerful deep-tissue techniques with guided stretching to unlock deep-rooted tension and restore equilibrium throughout the body. Expert moves target areas of muscular tightness, improving mobility, releasing built-up stress, and encouraging natural realignment.</p>
                         <p class="max-w-[260px] leading-relaxed text-sm space-y-4">Ideal for those who train at the gym, practice sports, or carry chronic tension, this massage works beyond the surface to free the body, enhance recovery, and leave you feeling lighter, more flexible, and deeply restored.</p>
-                  <!-- 
-                  4) Finally we add a closing button. This is just a span with an onclick event that will close the dialog.  
-                  -->
-                  <span class="closingX" onclick="this.parentElement.parentElement.close()">X</span>
+                  <!-- Adding a closing button. This is just a span with an onclick event that will close the dialog.  -->
+                  <span class="closingX" onclick="closeDialog(this)">X</span>
                 </div>
             </dialog>
 
-            <div onclick="this.nextElementSibling.showModal()" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
+            <div onclick="openDialog(this)" class="snap-start shrink-0 basis-[80%] sm:basis-[48%] lg:basis-[calc((100%-4rem)/3)]">
                 <div class="relative">
                     <img class="relative aspect-portrait-tall rounded-full object-cover object-center hover:opacity-20 transition-all" src="/assets/images/sparoom3_Preview.jpeg">
                 </div>
@@ -297,10 +290,9 @@ title: Main Page
                     <p class="max-w-[260px] leading-relaxed text-sm space-y-4 mb-4">
                         At Sage & Stone Wellness, we understand that every body and every day is different. Instead of choosing from a set menu, you simply select the amount of time you’d like to spend in treatment, and together we will create a personalised experience to suit your needs in that moment.</p>
                         <p class="max-w-[260px] leading-relaxed text-sm space-y-4">Whether you are seeking deep muscular release, soothing relaxation, energy balance, or a combination of techniques, I will draw upon my full range of therapies to design a ritual that nurtures your body, calms your mind, and restores balance.</p>
-                  <!-- 
-                  4) Finally we add a closing button. This is just a span with an onclick event that will close the dialog.  
-                  -->
-                  <span class="closingX" onclick="this.parentElement.parentElement.close()">X</span>
+
+                  <!-- Adding a closing button. This is just a span with an onclick event that will close the dialog.  -->
+                  <span class="closingX" onclick="closeDialog(this)">X</span>
                 </div>
             </dialog>
             
@@ -392,10 +384,10 @@ title: Main Page
             <h2 class="py-8 md:pb-10 capitalize text-4xl font-header-serif ">how to get to us</h2>
             
             <h3 class="py-5 capitalize text-lg font-body-sans">parking</h3>
-            <p class="py-2 font-body-sans">On-street parking may be available on Queensferry Road itself and nearby side streets, but restrictions apply during busy daytime hours</p>
+            <p class="py-2 font-body-sans text-brown">On-street parking may be available on Queensferry Road itself and nearby side streets, but restrictions apply during busy daytime hours</p>
             <h3 class="py-5 capitalize text-lg font-body-sans">bus route</h3>
-            <p class="py-2 font-body-sans">Lothian and Stagecoach buses stop on or near Queensferry Road, which is the main road where the clinic is located. Key routes serving stops close by include: 38, 43, 47 and X55/X59 express buses.</p>
-            <p class="font-body-sans hidden md:block">The closest stops are typically at Craigleith Road (about a 1 minute walk) or Groathill Road South (roughly 8–10 minutes on foot), depending on which direction you’re coming from.</p>
+            <p class="py-2 font-body-sans text-brown">Lothian and Stagecoach buses stop on or near Queensferry Road, which is the main road where the clinic is located. Key routes serving stops close by include: 38, 43, 47 and X55/X59 express buses.</p>
+            <p class="font-body-sans hidden md:block text-brown">The closest stops are typically at Craigleith Road (about a 1 minute walk) or Groathill Road South (roughly 8–10 minutes on foot), depending on which direction you’re coming from.</p>
         </div>
     </div>
     <div class="p-5 lg:hidden">

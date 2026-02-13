@@ -92,6 +92,36 @@ if (btn && menu) {
 }
 
 
+//dialog pop up
+
+let lastScrollY = 0;
+let lastOpener = null;
+
+function openDialog(openerEl) {
+  lastScrollY = window.scrollY;
+  lastOpener = openerEl;
+  openerEl.nextElementSibling.showModal();
+}
+
+function closeDialog(closeEl) {
+  const dlg = closeEl.closest("dialog");
+  dlg.close();
+
+  // restore scroll position
+  window.scrollTo(0, lastScrollY);
+
+  // restore focus without scrolling (prevents snap/scroll jump)
+  if (lastOpener && lastOpener.focus) {
+    try { lastOpener.focus({ preventScroll: true }); }
+    catch { lastOpener.focus(); }
+  }
+}
+
+document.querySelectorAll("dialog").forEach(dlg => {
+  dlg.addEventListener("close", () => window.scrollTo(0, lastScrollY));
+});
+
+
 
 
 
