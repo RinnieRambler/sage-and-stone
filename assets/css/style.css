@@ -520,6 +520,9 @@ video {
 .top-0 {
     top: 0px;
 }
+.top-10 {
+    top: 2.5rem;
+}
 .top-12 {
     top: 3rem;
 }
@@ -537,6 +540,9 @@ video {
 }
 .z-10 {
     z-index: 10;
+}
+.order-2 {
+    order: 2;
 }
 .col-span-2 {
     grid-column: span 2 / span 2;
@@ -601,6 +607,12 @@ video {
 .mt-6 {
     margin-top: 1.5rem;
 }
+.mt-8 {
+    margin-top: 2rem;
+}
+.mt-auto {
+    margin-top: auto;
+}
 .block {
     display: block;
 }
@@ -624,6 +636,9 @@ video {
 }
 .aspect-\[3\/4\] {
     aspect-ratio: 3/4;
+}
+.aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
 }
 .aspect-portrait {
     aspect-ratio: 4/5;
@@ -683,17 +698,14 @@ video {
 .w-4 {
     width: 1rem;
 }
-.w-\[78vw\] {
-    width: 78vw;
+.w-\[72vw\] {
+    width: 72vw;
 }
 .w-auto {
     width: auto;
 }
 .w-full {
     width: 100%;
-}
-.w-\[72vw\] {
-    width: 72vw;
 }
 .max-w-100 {
     max-width: 100%;
@@ -716,8 +728,14 @@ video {
 .max-w-\[26rem\] {
     max-width: 26rem;
 }
+.max-w-\[340px\] {
+    max-width: 340px;
+}
 .max-w-md {
     max-width: 28rem;
+}
+.max-w-prose {
+    max-width: 65ch;
 }
 .flex-shrink {
     flex-shrink: 1;
@@ -794,8 +812,17 @@ video {
 .justify-around {
     justify-content: space-around;
 }
+.gap-10 {
+    gap: 2.5rem;
+}
+.gap-12 {
+    gap: 3rem;
+}
 .gap-16 {
     gap: 4rem;
+}
+.gap-2 {
+    gap: 0.5rem;
 }
 .gap-20 {
     gap: 5rem;
@@ -822,6 +849,9 @@ video {
 .self-start {
     align-self: flex-start;
 }
+.self-end {
+    align-self: flex-end;
+}
 .overflow-hidden {
     overflow: hidden;
 }
@@ -840,14 +870,14 @@ video {
 .rounded {
     border-radius: 0.25rem;
 }
-.rounded-2xl {
-    border-radius: 1rem;
-}
 .rounded-3xl {
     border-radius: 1.5rem;
 }
 .rounded-full {
     border-radius: 9999px;
+}
+.rounded-lg {
+    border-radius: 0.5rem;
 }
 .rounded-sm {
     border-radius: 0.125rem;
@@ -953,9 +983,6 @@ video {
     -o-object-position: center;
        object-position: center;
 }
-.p-0 {
-    padding: 0px;
-}
 .p-10 {
     padding: 2.5rem;
 }
@@ -1032,6 +1059,10 @@ video {
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
 .py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -1100,6 +1131,9 @@ video {
 }
 .pr-6 {
     padding-right: 1.5rem;
+}
+.pt-10 {
+    padding-top: 2.5rem;
 }
 .pt-10p {
     padding-top: 10%;
@@ -1255,11 +1289,6 @@ video {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-.transition-opacity {
-    transition-property: opacity;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-}
 .duration-1000 {
     transition-duration: 1000ms;
 }
@@ -1331,8 +1360,8 @@ body, html {
 }
 
 .icon-button {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   margin-left: 6px;
   display: inline-flex;
   justify-content: center;
@@ -1340,7 +1369,7 @@ body, html {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .icon-button:hover {
@@ -1408,10 +1437,6 @@ dialog{
     color: #806550;
   }
 
-  .backdrop\:bg-black\/30::backdrop {
-    background-color: rgb(0 0 0 / 0.3);
-}
-
   .hover\:border-2:hover {
     border-width: 2px;
 }
@@ -1464,18 +1489,11 @@ dialog{
     opacity: 0.7;
 }
 
-  .hover\:opacity-80:hover {
-    opacity: 0.8;
-}
-
   .group:hover .group-hover\:block {
     display: block;
 }
 
   @media (min-width: 640px) {
-    .sm\:w-\[46vw\] {
-        width: 46vw;
-    }
     .sm\:w-\[44vw\] {
         width: 44vw;
     }
@@ -1585,6 +1603,9 @@ dialog{
     .md\:max-w-\[28rem\] {
         max-width: 28rem;
     }
+    .md\:max-w-\[420px\] {
+        max-width: 420px;
+    }
     .md\:snap-center {
         scroll-snap-align: center;
     }
@@ -1625,6 +1646,9 @@ dialog{
     .md\:p-10 {
         padding: 2.5rem;
     }
+    .md\:p-10p {
+        padding: 10%;
+    }
     .md\:p-48 {
         padding: 12rem;
     }
@@ -1650,10 +1674,6 @@ dialog{
         padding-left: 5rem;
         padding-right: 5rem;
     }
-    .md\:px-28 {
-        padding-left: 7rem;
-        padding-right: 7rem;
-    }
     .md\:px-40 {
         padding-left: 10rem;
         padding-right: 10rem;
@@ -1661,10 +1681,6 @@ dialog{
     .md\:px-6 {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-    .md\:py-12 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
     }
     .md\:py-20 {
         padding-top: 5rem;
@@ -1720,6 +1736,9 @@ dialog{
 }
 
   @media (min-width: 1024px) {
+    .lg\:order-3 {
+        order: 3;
+    }
     .lg\:mx-0 {
         margin-left: 0px;
         margin-right: 0px;
@@ -1739,14 +1758,14 @@ dialog{
     .lg\:min-h-90 {
         min-height: 90vh;
     }
-    .lg\:w-\[320px\] {
-        width: 320px;
-    }
     .lg\:max-w-\[36rem\] {
         max-width: 36rem;
     }
     .lg\:max-w-\[48rem\] {
         max-width: 48rem;
+    }
+    .lg\:max-w-\[520px\] {
+        max-width: 520px;
     }
     .lg\:basis-\[32\%\] {
         flex-basis: 32%;
@@ -1760,11 +1779,20 @@ dialog{
     .lg\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    .lg\:justify-end {
-        justify-content: flex-end;
+    .lg\:items-center {
+        align-items: center;
+    }
+    .lg\:justify-start {
+        justify-content: flex-start;
+    }
+    .lg\:gap-20 {
+        gap: 5rem;
     }
     .lg\:gap-8 {
         gap: 2rem;
+    }
+    .lg\:self-end {
+        align-self: flex-end;
     }
     .lg\:p-0 {
         padding: 0px;
@@ -1778,20 +1806,19 @@ dialog{
     .lg\:p-24 {
         padding: 6rem;
     }
-    .lg\:px-40 {
-        padding-left: 10rem;
-        padding-right: 10rem;
+    .lg\:py-0 {
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .lg\:py-10 {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
-    .lg\:py-20 {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
     .lg\:pb-0 {
         padding-bottom: 0px;
+    }
+    .lg\:pb-6 {
+        padding-bottom: 1.5rem;
     }
     .lg\:pl-0 {
         padding-left: 0px;
@@ -1799,17 +1826,33 @@ dialog{
     .lg\:pr-0 {
         padding-right: 0px;
     }
+    .lg\:pr-8 {
+        padding-right: 2rem;
+    }
     .lg\:pt-0 {
         padding-top: 0px;
     }
+    .lg\:pt-16 {
+        padding-top: 4rem;
+    }
     .lg\:pt-32 {
         padding-top: 8rem;
+    }
+    .lg\:pt-6 {
+        padding-top: 1.5rem;
+    }
+    .lg\:pt-8 {
+        padding-top: 2rem;
     }
     .lg\:text-left {
         text-align: left;
     }
     .lg\:text-right {
         text-align: right;
+    }
+    .lg\:text-3xl {
+        font-size: 1.875rem;
+        line-height: 1;
     }
     .lg\:text-4xl {
         font-size: 2.25rem;
@@ -1836,5 +1879,8 @@ dialog{
     }
     .xl\:p-36 {
         padding: 9rem;
+    }
+    .xl\:p-\[7\%\] {
+        padding: 7%;
     }
 }

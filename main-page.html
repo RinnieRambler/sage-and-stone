@@ -409,10 +409,10 @@ title: Main Page
 
 </section>
 
-
+ 
 <!---- meet Claire ---->
 
-<section id="founder" style="background-image: url('/assets/images/cream-banner.png')" class="bg-image min-h-full">
+<!-- <section id="founder" style="background-image: url('/assets/images/cream-banner.png')" class="bg-image min-h-full">
 
     <div class="grid mx-auto lg:grid-cols-2 gap-20 p-10 md:p-48 bg-cream min-h-80">
         <div class="flex justify-center lg:mx-0">
@@ -427,13 +427,32 @@ title: Main Page
         </div>
     </div>
 
+</section> -->
+
+<!---- meet Claire ---->
+
+<section id="founder" style="background-image: url('/assets/images/cream-banner.png')" class="bg-image min-h-full">
+
+    <div class="grid mx-auto max-w-6xl lg:grid-cols-2 gap-12 px-6 md:px-10 py-16 bg-cream items-start">
+        <div class="flex justify-center lg:justify-start lg:mx-0">
+            <img class="w-full max-w-[340px] md:max-w-[420px] aspect-[3/4] object-cover rounded-t-full " src="/assets/images/claire-headshot.JPG">
+        </div>
+        <div class="text-golddark max-w-prose mx-auto lg:mx-0 text-center lg:text-left lg:max-w-[520px] h-fit sticky top-10">
+            <h2 class="text-golddark text-shadow font-header-serif text-2xl sm:text-3xl lg:text-4xl pr-2 pt-6 pb-2 font-header-sans uppercase">meet Claire</h2>
+            <h2 class="text-brown text-xl font-header-serif pb-8">20+ Years Experience | 5-Star Spa Specialist</h2>
+            <p class="leading-8 py-2 font-body-sans">With over 20 years of experience in some of the UK and Europe’s most prestigious five-star spas, Claire Vacek is known for her intuitive touch, deep understanding of the body, and wholehearted approach to wellbeing.</p>
+            <p class="leading-8 py-2 font-body-sans">Claire created Sage & Stone Wellness as a place where clients feel truly cared for - where every treatment is guided by genuine empathy and an understanding that true wellbeing comes from restoring balance at its roots.</p>
+            <p class="leading-8 py-2 font-body-sans">Through mindful touch, grounding techniques, and tailored rituals, she helps each client find a sense of calm, clarity, and reconnection that lingers long after the treatment ends.</p>
+        </div>
+    </div>
+
 </section>
 
 
 <!---- text with CTA ---->
 
-<section class="  bg-cream text-golddark overflow-x-clip">
-    <div class="grid md:grid-cols-12 py-20 md:py-12 md:px-28 lg:py-20 mx-auto max-w-6xl">
+<section class="  bg-cream text-golddark overflow-x-clip p-5p md:p-10p">
+    <div class="grid md:grid-cols-12  mx-auto max-w-6xl">
         <div class="font-body-sans col-span-6" data-aos="fade-up" data-aos-duration="2000">
             <p class="leading-8 pb-4 capitalize">Imagine wandering through a Glen at sunrise <br> — <br>the scent of wild sage warming in the light,<br>the touch of smooth river stones beneath your feet,<br>the hush of nature settling into perfect harmony.</p>
 
@@ -481,7 +500,7 @@ title: Main Page
 
 <!---- map section ---->
 
-<section id="find" class="bg-cream p-5 md:p-10 lg:p-20">
+<!-- <section id="find" class="bg-cream p-5 md:p-10 lg:p-20">
 
     <div class="grid md:grid-cols-2 xl:p-20">
         <div class="lg:p-10 hidden lg:block">
@@ -502,48 +521,95 @@ title: Main Page
         <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.522394786849!2d-3.2522955231054858!3d55.95764947316076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c779856b0d37%3A0x2399eb23e52f4180!2sRejuv%20Skin%20Clinic!5e0!3m2!1sen!2sus!4v1769024381390!5m2!1sen!2sus" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
 
-</section>
+</section> -->
+
+<!----- map fix ------>
+
+<section id="find" class="bg-cream p-5 md:p-10 lg:p-20">
+    <!-- GRID should only become 2 columns on lg -->
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">
+      
+      <!-- BIG MAP: only show on lg+ -->
+      <div class="hidden lg:block">
+        <div class="aspect-[4/3] w-full overflow-hidden rounded-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.522394786849!2d-3.2522955231054858!3d55.95764947316076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c779856b0d37%3A0x2399eb23e52f4180!2sRejuv%20Skin%20Clinic!5e0!3m2!1sen!2sus!4v1769024381390!5m2!1sen!2sus"
+            class="w-full h-full"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+  
+      <!-- TEXT -->
+      <div class="py-12 pl-4 lg:py-0 lg:pr-8 text-gold">
+        <h2 class="pb-8 md:pb-10 capitalize text-4xl font-header-serif">how to get to us</h2>
+  
+        <h3 class="py-5 capitalize text-lg font-body-sans">parking</h3>
+        <p class="py-2 font-body-sans text-brown">On-street parking may be available on Queensferry Road itself and nearby side streets, but restrictions apply during busy daytime hours</p>
+  
+        <h3 class="py-5 capitalize text-lg font-body-sans">bus route</h3>
+        <p class="py-2 font-body-sans text-brown">Lothian and Stagecoach buses stop on or near Queensferry Road, which is the main road where the clinic is located. Key routes serving stops close by include: 38, 43, 47 and X55/X59 express buses.</p>
+        <p class="font-body-sans hidden xl:block text-brown">The closest stops are typically at Craigleith Road (about a 1 minute walk) or Groathill Road South (roughly 8–10 minutes on foot), depending on which direction you’re coming from.</p>
+      </div>
+    </div>
+  
+    <!-- SMALL MAP: show on <lg -->
+    <div class="mt-8 lg:hidden">
+      <div class="max-w-3xl mx-auto overflow-hidden rounded-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.522394786849!2d-3.2522955231054858!3d55.95764947316076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c779856b0d37%3A0x2399eb23e52f4180!2sRejuv%20Skin%20Clinic!5e0!3m2!1sen!2sus!4v1769024381390!5m2!1sen!2sus"
+          class="w-full h-full"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  
 
 <!---- footer ---->
 
 <footer class="bg-cream min-h-40 border-t border-2 border-gold p-2 lg:p-0">
 
-    <div class="grid lg:grid-cols-3 p-5 lg:px-40 lg:py-20">
+    <div class="grid lg:grid-cols-3 p-5p xl:p-[7%]">
         <div class="pb-6 lg:pb-0 text-center lg:text-left">
             <a href="/index.html"><img src="/assets/images/sage-and-stone-logo-final-website.svg" class="h-32 w-auto mx-auto lg:mx-0"></a>
-            <h4 class="font-header-serif text-3xl uppercase text-golddark text-shadow pt-16 pb-6">sage & stone wellness</h4>
-            <p class="uppercase text-gold pb-6 font-body-sans">rejuv skin clinic, 242 queensferry road, <br>edinburgh, eh4 2bp</p>
-            <a class="uppercase text-gold block pb-6 font-body-sans" href="mailto:info@sageandstonewellness.co.uk" target="_blank"> info@sageandstonewellness.co.uk</a>
-            <a class="text-gold block font-body-sans" href="tel:+447745321641">07745321641</a>
+            <h4 class="font-header-serif text-2xl lg:text-3xl uppercase text-golddark text-shadow pt-10 lg:pt-16 pb-4 lg:pb-6">sage & stone wellness</h4>
+            <p class="uppercase text-gold text-sm lg:text-md pb-4 lg:pb-6 font-body-sans">rejuv skin clinic, 242 queensferry road, <br>edinburgh, eh4 2bp</p>
+            <a class="uppercase text-gold text-sm lg:text-md block pb-4 lg:pb-6 font-body-sans" href="mailto:info@sageandstonewellness.co.uk" target="_blank"> info@sageandstonewellness.co.uk</a>
+            <a class="text-gold text-sm lg:text-md block font-body-sans" href="tel:+447745321641">07745321641</a>
         </div>
-        <div class="flex justify-center items-end mb-4 xl:order-3 lg:block">
-            <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://www.instagram.com/sageandstonewellnessedinburgh"><i class="fa-brands fa-instagram" aria-label="View us on Instagram"></i></a>
-            <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://www.facebook.com/share/1G2uiAwKTu/?mibextid=wwXlfr"><i class="fa-brands fa-facebook" aria-label="View us on Facebook"></i></a>
-            <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://wa.me/447745321641"><i class="fa-brands fa-whatsapp" aria-label="Chat with us on Whatsapp"></i></a>
+        <div class="flex justify-center lg:items-center self-end xl:order-3">
+            <a class="bg-gold text-cream icon-button text-sm lg:text-md" target="_blank" rel="noopener" href="https://www.instagram.com/sageandstonewellnessedinburgh"><i class="fa-brands fa-instagram" aria-label="View us on Instagram"></i></a>
+            <a class="bg-gold text-cream icon-button text-sm lg:text-md" target="_blank" rel="noopener" href="https://www.facebook.com/share/1G2uiAwKTu/?mibextid=wwXlfr"><i class="fa-brands fa-facebook" aria-label="View us on Facebook"></i></a>
+            <a class="bg-gold text-cream icon-button text-sm lg:text-md" target="_blank" rel="noopener" href="https://wa.me/447745321641"><i class="fa-brands fa-whatsapp" aria-label="Chat with us on Whatsapp"></i></a>
         </div>
-        <div class="font-body-sans">
-            <div class="flex lg:justify-end pt-6 lg:pt-0 ">
-                <a class="bg-gold rounded-full text-cream uppercase px-8 py-2 mx-auto lg:mx-0" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book</a>
+        <div class="font-body-sans order-2 lg:order-3 lg:text-right flex flex-col h-full">
+            <div class="flex justify-end gap-2 lg:self-end pt-12 lg:pt-0 ">
+                <a class="bg-gold rounded-full text-cream text-sm lg:text-md uppercase px-8 py-2 mx-auto lg:mx-0" href="https://www.fresha.com/a/sage-and-stone-wellness-edinburgh-rejuv-skin-clinic-242-queensferry-road-wglpk94f/booking?cartId=bb6f21c7-a733-419d-bdcc-bcdd4b9dca36" target="_blank">book</a>
             </div>
-            <h5 class="uppercase text-gold pt-16 pb-2 text-center lg:text-right">hours</h5>
-            <p class="text-gold pb-4 text-center lg:text-right">Monday 10am - 8pm</p>
-            <h5 class="uppercase text-gold pt-8 pb-2 text-center lg:text-right">specialities</h5>
-            <p class="text-gold capitalize pb-2 text-center lg:text-right">womens health, holistic health, therapeutic <br>massage, wellbeing, relaxation</p>
-            <div class="pt-6 flex justify-end">
-                <a class="uppercase text-gold block pb-6 mx-auto lg:mx-0" href="https://google.com/maps/place/Rejuv+Skin+Clinic/data=!4m2!3m1!1s0x0:0x2399eb23e52f4180?sa=X&ved=1t:2428&ictx=111">find us</a>
-            </div>
-            <div class="flex justify-end">
-                <a class="uppercase text-gold block mx-auto lg:mx-0" href="#navbar">back to top</a>
-            </div>
+                <h5 class="uppercase text-gold text-sm lg:text-md pt-6 lg:pt-16 pb-2 text-center lg:text-right">hours</h5>
+                <p class="text-gold text-center text-sm lg:text-md lg:text-right">Monday 10am - 8pm</p>
+                <h5 class="uppercase text-gold text-sm lg:text-md pt-4 lg:pt-8 pb-2 text-center lg:text-right">specialities</h5>
+                <p class="text-gold text-sm lg:text-md capitalize pb-2 text-center lg:text-right">womens health, holistic health, therapeutic <br>massage, wellbeing, relaxation</p>
+                <div class="mt-auto">   
+                    <div class="pt-4 lg:pt-6 flex justify-end">
+                        <a class="uppercase text-gold text-sm lg:text-md block pb-4 lg:pb-6 mx-auto lg:mx-0" href="https://google.com/maps/place/Rejuv+Skin+Clinic/data=!4m2!3m1!1s0x0:0x2399eb23e52f4180?sa=X&ved=1t:2428&ictx=111">find us</a>
+                    </div>
+                    <div class="flex justify-end">
+                        <a class="uppercase text-gold text-sm lg:text-md block mx-auto lg:mx-0" href="#navbar">back to top</a>
+                    </div>
+                </div> 
         </div>
-    </div>
-    <div class="flex justify-center items-end my-4 lg:hidden">
-        <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://www.instagram.com/sageandstonewellnessedinburgh"><i class="fa-brands fa-instagram" aria-label="View us on Instagram"></i></a>
-        <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://www.facebook.com/share/1G2uiAwKTu/?mibextid=wwXlfr"><i class="fa-brands fa-facebook" aria-label="View us on Facebook"></i></a>
-        <a class="bg-gold text-cream icon-button" target="_blank" rel="noopener" href="https://wa.me/447745321641"><i class="fa-brands fa-whatsapp" aria-label="Chat with us on Whatsapp"></i></a>
     </div>
 
 </footer>
+  
 
 <section class="bg-gold text-cream/80 text-sm font-body-sans">
     <div>
