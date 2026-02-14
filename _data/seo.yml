@@ -1,7 +1,7 @@
 # this is not page specific but site wide as a back up in case client adds new page without SEO, page specific in front matter
 title: Sage & Stone Wellness | Holistic Massage Therapy & Relaxation in Edinburgh
 description: Relax, restore, and rebalance with holistic massage and healing treatments designed to nurture your body, mind, and soul.
-image: /assets/images/splash-sands.jpeg
+image: https://yourdomain.co.uk/assets/images/splash-sands.jpeg
 favicon: /assets/images/ss-favicon.svg
 google-site-verification: ask tina - think google gives you a list of characters when you sign up for google analytics
 keywords: 

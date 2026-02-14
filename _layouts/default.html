@@ -37,6 +37,11 @@
     <!-- meta-fields / SEO -->
     <title>{{page.seo.title | default: site.data.seo.title }}</title>
     <meta name="description" content="{{page.seo.description | default: site.data.seo.description}}">
+    <meta property="og:title" content="{{ page.seo.title | default: site.data.seo.title }}">
+    <meta property="og:description" content="{{ page.seo.description | default: site.data.seo.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ site.url }}{{ page.seo.image | default: site.data.seo.image }}">
+
     <meta property="og:image" content="{{page.data.seo.image | default: site.data.seo.image}}">
     
     <meta name="google" content="nositelinkssearchbox">
@@ -45,11 +50,36 @@
     {% endif %}
     
 
-    {% if page.seo.index == true %}
-      <meta name="robots" content="all">
+    {% if page.seo.noindex == true %}
+    <meta name="robots" content="noindex, nofollow">
     {% else %}
-      <meta name="robots" content="none">
+    <meta name="robots" content="index, follow">
     {% endif %}
+
+    <!------Canonical Tag to help SEO ------>
+
+    <link rel="canonical" href="https://sageandstonewellness.co.uk/">
+
+
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Sage & Stone Wellness",
+        "image": "https://yourdomain.co.uk/assets/images/splash-sands.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "242 Queensferry Road",
+          "addressLocality": "Edinburgh",
+          "postalCode": "EH4 2BP",
+          "addressCountry": "UK"
+        },
+        "telephone": "+447745321641",
+        "url": "https://yourdomain.co.uk"
+      }
+      </script>
+      
 
 </head>
 
@@ -128,198 +158,157 @@
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
-  ]
-});
-
-    {% endif %}
-
-{% endfor %}
-
-
-// scripts that don't vary (no repeat)
-
-    // {% if has-filterable-gallery %}
-// Filterable Gallery Script Below
-//   const gallery = document.querySelectorAll('.filterable-gallery')
-
-// gallery.forEach(section => {
-  
-
-//   const filterButtons = section.querySelectorAll('.filter-buttons')
-
-//   const gridItems = section.querySelectorAll('.grid-items')
-
-//   console.log(filterButtons,gridItems)
-
-//   function filterGallery() {
-
-//   filterButtons.forEach(button => {
-//     button.classList.remove('active')
-//   });
-
-//   this.classList.add('active')
-
-//   let target = this.innerHTML
-
-//     gridItems.forEach(image => {
-//       if (image.classList.contains(target)){
-//         image.classList.remove('hidden')
-//       }
-//       else { 
-//         image.classList.add('hidden')
-//       }
-//     } )
-//   }
-
-//   filterButtons.forEach(button => {
-//     button.addEventListener('click', filterGallery)
-//   });
-
+//   ]
 // });
 
-// {% endif %}
-</script>
+//     {% endif %}
 
-<!-- Like all the other snippets, this one is also a self contained snippet. It is a cookie banner that is fully functional (with revocable cookies at any time) and can be added to any website -->
+// {% endfor %}
+
+
+
+
+
+// <!-- Like all the other snippets, this one is also a self contained snippet. It is a cookie banner that is fully functional (with revocable cookies at any time) and can be added to any website -->
     
-    <!-- The banner is a fixed banner that is at the bottom of the page. It has 2 buttons, one for accepting all cookies, one for declining all cookies.-->
-     <!-- <div id="cookie-notice" role="dialog" class="init">
-        <button id = "accepteCookies" class="cookie-btn accept">Accept</button>
-        <button id = "declineCookies" class="cookie-btn decline">Decline</button>
-      </div>  -->
+//     <!-- The banner is a fixed banner that is at the bottom of the page. It has 2 buttons, one for accepting all cookies, one for declining all cookies.-->
+//      <!-- <div id="cookie-notice" role="dialog" class="init">
+//         <button id = "accepteCookies" class="cookie-btn accept">Accept</button>
+//         <button id = "declineCookies" class="cookie-btn decline">Decline</button>
+//       </div>  -->
       
       
-      <style>
+//       <style>
 
-        #cookie-notice {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          background: #222;
-          color: #fff;
-          text-align: center;
-          padding: 1rem;
-          z-index: 9999;
-        }
+      //   #cookie-notice {
+      //     position: fixed;
+      //     bottom: 0;
+      //     left: 0;
+      //     width: 100%;
+      //     background: #222;
+      //     color: #fff;
+      //     text-align: center;
+      //     padding: 1rem;
+      //     z-index: 9999;
+      //   }
 
-        .cookie-btn {
-          margin: 0 10px;
-          padding: 20px, 25px;
-          border: none;
-          cursor: pointer;
-          border-radius: 4px;
-          font-size: 1rem;
-        }
+      //   .cookie-btn {
+      //     margin: 0 10px;
+      //     padding: 20px, 25px;
+      //     border: none;
+      //     cursor: pointer;
+      //     border-radius: 4px;
+      //     font-size: 1rem;
+      //   }
 
-        .cookie-btn.accept {
-          background-color: #4caf50;
-          color: #fff;
-        }
+      //   .cookie-btn.accept {
+      //     background-color: #4caf50;
+      //     color: #fff;
+      //   }
 
-        .cookie-btn.decline {
-          background-color: #f44336;
-          color: #fff;
-        }
+      //   .cookie-btn.decline {
+      //     background-color: #f44336;
+      //     color: #fff;
+      //   }
       
 
       
-      </style>
+      // </style>
 
-      <script>
-        const cookieNotice = document.getElementById('cookie-notice');
-        const acceptBtn = document.getElementById('acceptCookies');
-        const declineBtn = document.getElementById('declineCookies');
+      // <script>
+      //   const cookieNotice = document.getElementById('cookie-notice');
+      //   const acceptBtn = document.getElementById('acceptCookies');
+      //   const declineBtn = document.getElementById('declineCookies');
 
-        // Example functionality
-        acceptBtn.addEventListener('click', () => {
-          document.cookie = "cookiesAccepted=true; path=/;";
-          cookieNotice.style.display = 'none';
-        });
+      //   // Example functionality
+      //   acceptBtn.addEventListener('click', () => {
+      //     document.cookie = "cookiesAccepted=true; path=/;";
+      //     cookieNotice.style.display = 'none';
+      //   });
 
-        declineBtn.addEventListener('click', () => {
-          document.cookie = "cookiesAccepted=false; path=/;";
-          cookieNotice.style.display = 'none';
-        });
-      </script> 
+      //   declineBtn.addEventListener('click', () => {
+      //     document.cookie = "cookiesAccepted=false; path=/;";
+      //     cookieNotice.style.display = 'none';
+      //   });
+      // </script> 
       
-      <!-- first part of google data thing within script tags  -->
-      <script>
-        function createCookie(name,value,days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days*24*60*60*1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + value + expires + "; path=/";
-        }
-        function readCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-            }
-            return null;
-        }
-        function eraseCookie(name) {
-            createCookie(name,"",-1);
-        }
-      
-      
+      // <!-- first part of google data thing within script tags  -->
+      // <script>
+      //   function createCookie(name,value,days) {
+      //       var expires = "";
+      //       if (days) {
+      //           var date = new Date();
+      //           date.setTime(date.getTime() + (days*24*60*60*1000));
+      //           expires = "; expires=" + date.toUTCString();
+      //       }
+      //       document.cookie = name + "=" + value + expires + "; path=/";
+      //   }
+      //   function readCookie(name) {
+      //       var nameEQ = name + "=";
+      //       var ca = document.cookie.split(';');
+      //       for(var i=0;i < ca.length;i++) {
+      //           var c = ca[i];
+      //           while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      //           if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      //       }
+      //       return null;
+      //   }
+      //   function eraseCookie(name) {
+      //       createCookie(name,"",-1);
+      //   }
       
       
-        const cookieBanner = document.querySelector('#cookie-notice')
-        const cookieButtons = cookieBanner.querySelectorAll('.cookieButton')
-        const acceptAllButton = cookieBanner.querySelector('.accept-all')
-        const hideButton = cookieBanner.querySelector('.hide-button')
-        let allCookiesAccepted = true
-        let unaccepted = false 
       
       
-        // button initilisaztion
-        cookieButtons.forEach(button => {
-          let buttonCookie = button.dataset.cookieType
+      //   const cookieBanner = document.querySelector('#cookie-notice')
+      //   const cookieButtons = cookieBanner.querySelectorAll('.cookieButton')
+      //   const acceptAllButton = cookieBanner.querySelector('.accept-all')
+      //   const hideButton = cookieBanner.querySelector('.hide-button')
+      //   let allCookiesAccepted = true
+      //   let unaccepted = false 
       
-          if ( readCookie(buttonCookie) == 'accepted' ){
-            button.classList.remove('unaccepted')
-            button.classList.add('accepted')
-          }
       
-          button.addEventListener('click', () => {
+      //   // button initilisaztion
+      //   cookieButtons.forEach(button => {
+      //     let buttonCookie = button.dataset.cookieType
+      
+      //     if ( readCookie(buttonCookie) == 'accepted' ){
+      //       button.classList.remove('unaccepted')
+      //       button.classList.add('accepted')
+      //     }
+      
+      //     button.addEventListener('click', () => {
             
-            if (button.classList.contains('unaccepted')){
-              button.classList.remove('unaccepted')
-              button.classList.add('accepted')
-              createCookie(buttonCookie,'accepted',31)
-            } else {
-              button.classList.add('unaccepted')
-              button.classList.remove('accepted')
-              createCookie(buttonCookie,'unaccepted',31) 
-            }
-            runCookies()
-            console.log(buttonCookie, readCookie(buttonCookie))
-          })
+      //       if (button.classList.contains('unaccepted')){
+      //         button.classList.remove('unaccepted')
+      //         button.classList.add('accepted')
+      //         createCookie(buttonCookie,'accepted',31)
+      //       } else {
+      //         button.classList.add('unaccepted')
+      //         button.classList.remove('accepted')
+      //         createCookie(buttonCookie,'unaccepted',31) 
+      //       }
+      //       runCookies()
+      //       console.log(buttonCookie, readCookie(buttonCookie))
+      //     })
       
-        })
+      //   })
       
-        // checks for unaccepted cookie buttons 
-      function checkForUnacceptedCookies() {
-        console.log('cookie checker')
+      //   // checks for unaccepted cookie buttons 
+      // function checkForUnacceptedCookies() {
+      //   console.log('cookie checker')
       
-        if (Array.from(cookieButtons).some((node) => node.classList.contains('unaccepted'))) {
-          return true
-        }
-        return false
-      }
+      //   if (Array.from(cookieButtons).some((node) => node.classList.contains('unaccepted'))) {
+      //     return true
+      //   }
+      //   return false
+      // }
         
       
-        // runs the codes based on different button
-        function runCookies() {
-            allCookiesAccepted = true
-            if (readCookie('analyticCookies')=='accepted') {
+      //   // runs the codes based on different button
+      //   function runCookies() {
+      //       allCookiesAccepted = true
+      //       if (readCookie('analyticCookies')=='accepted') {
               // analitic cookie codes
               // add in second part HERE of google data thing NOT in script tags - STRIP THE SCRIPT!!!!!
             } 
