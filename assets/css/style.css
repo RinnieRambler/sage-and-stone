@@ -1453,6 +1453,12 @@ dialog{
     color: #806550;
   }
 
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
   .hover\:border-2:hover {
     border-width: 2px;
 }
