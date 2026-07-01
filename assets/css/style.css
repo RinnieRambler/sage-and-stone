@@ -704,6 +704,9 @@ video {
 .min-h-screen {
     min-height: 100vh;
 }
+.min-h-\[75vh\] {
+    min-height: 75vh;
+}
 .w-4 {
     width: 1rem;
 }
@@ -774,6 +777,9 @@ video {
 }
 .cursor-pointer {
     cursor: pointer;
+}
+.resize-none {
+    resize: none;
 }
 .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -970,6 +976,10 @@ video {
 .bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-golddark {
+    --tw-bg-opacity: 1;
+    background-color: rgb(195 169 75 / var(--tw-bg-opacity));
 }
 .bg-cover {
     background-size: cover;
@@ -1289,6 +1299,10 @@ video {
     --tw-text-opacity: 1;
     color: rgb(195 169 75 / var(--tw-text-opacity));
 }
+.text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .underline {
     text-decoration-line: underline;
 }
@@ -1459,6 +1473,34 @@ dialog{
     z-index: 1000;
   }
 
+  .placeholder\:text-sm::-moz-placeholder {
+    font-size: 0.875rem;;
+    line-height: 1.2;
+}
+
+  .placeholder\:text-sm::placeholder {
+    font-size: 0.875rem;;
+    line-height: 1.2;
+}
+
+  .placeholder\:uppercase::-moz-placeholder {
+    text-transform: uppercase;
+}
+
+  .placeholder\:uppercase::placeholder {
+    text-transform: uppercase;
+}
+
+  .placeholder\:text-black::-moz-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+  .placeholder\:text-black::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
   .hover\:border-2:hover {
     border-width: 2px;
 }
@@ -1509,6 +1551,26 @@ dialog{
 
   .hover\:opacity-70:hover {
     opacity: 0.7;
+}
+
+  .focus\:outline-none:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+  .placeholder\:focus\:text-gray-400:focus::-moz-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+  .placeholder\:focus\:text-gray-400:focus::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+  .focus-visible\:outline-none:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 
   .group:hover .group-hover\:block {
@@ -1776,6 +1838,9 @@ dialog{
     }
     .lg\:flex {
         display: flex;
+    }
+    .lg\:grid {
+        display: grid;
     }
     .lg\:hidden {
         display: none;
