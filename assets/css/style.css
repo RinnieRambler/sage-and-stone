@@ -574,6 +574,9 @@ video {
 .mb-4 {
     margin-bottom: 1rem;
 }
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
 .mb-6 {
     margin-bottom: 1.5rem;
 }
@@ -588,6 +591,9 @@ video {
 }
 .ml-4 {
     margin-left: 1rem;
+}
+.ml-auto {
+    margin-left: auto;
 }
 .mr-1 {
     margin-right: 0.25rem;
@@ -1011,6 +1017,9 @@ video {
 .p-10 {
     padding: 2.5rem;
 }
+.p-10p {
+    padding: 10%;
+}
 .p-2 {
     padding: 0.5rem;
 }
@@ -1035,6 +1044,10 @@ video {
 .px-0 {
     padding-left: 0px;
     padding-right: 0px;
+}
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 .px-10p {
     padding-left: 10%;
@@ -1075,6 +1088,10 @@ video {
 .px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+}
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 .py-10 {
     padding-top: 2.5rem;
@@ -1130,6 +1147,9 @@ video {
 .pb-5 {
     padding-bottom: 1.25rem;
 }
+.pb-5p {
+    padding-bottom: 5%;
+}
 .pb-6 {
     padding-bottom: 1.5rem;
 }
@@ -1147,6 +1167,9 @@ video {
 }
 .pr-2 {
     padding-right: 0.5rem;
+}
+.pr-2p {
+    padding-right: 2%;
 }
 .pr-4 {
     padding-right: 1rem;
@@ -1174,6 +1197,9 @@ video {
 }
 .pt-4 {
     padding-top: 1rem;
+}
+.pt-5p {
+    padding-top: 5%;
 }
 .pt-6 {
     padding-top: 1.5rem;
@@ -1212,6 +1238,10 @@ video {
 }
 .text-4xl {
     font-size: 2.25rem;
+    line-height: 1;
+}
+.text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
 }
 .text-\[0\.6rem\] {
@@ -1976,6 +2006,14 @@ dialog{
     .xl\:hidden {
         display: none;
     }
+    .xl\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .xl\:space-x-32 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(8rem * var(--tw-space-x-reverse));
+        margin-left: calc(8rem * calc(1 - var(--tw-space-x-reverse)));
+    }
     .xl\:p-20 {
         padding: 5rem;
     }
@@ -1984,5 +2022,8 @@ dialog{
     }
     .xl\:p-\[7\%\] {
         padding: 7%;
+    }
+    .xl\:pt-20p {
+        padding-top: 20%;
     }
 }
