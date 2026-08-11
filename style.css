@@ -101,6 +101,24 @@ body, html {
   font-size: 1.4rem;
 }
 
+.treatment-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #b29a68 transparent;
+}
+
+.treatment-scroll::-webkit-scrollbar {
+  height: 2px;
+}
+
+.treatment-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.treatment-scroll::-webkit-scrollbar-thumb {
+  background: #b29a68;
+  border-radius: 999px;
+}
+
 body .slick-next:before, body .slick-prev:before {
   @apply text-golddark
  }

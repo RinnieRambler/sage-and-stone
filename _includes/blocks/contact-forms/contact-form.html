@@ -1,32 +1,180 @@
-<section class="lg:grid grid-cols-2 min-h-[75vh] border border-golddark">
-  <div></div>
-  <div class="p-20">
-    <form class="">
-      <input type="text" id="name" name="name" placeholder="{{block.input-box-name-1}}" class="block w-full bg-light border-b placeholder:text-black placeholder:focus:text-gray-400 placeholder:uppercase placeholder:text-sm mb-4 focus:outline-none focus-visible:outline-none">
-      <input type="email" id="Email" name="Email" class="block w-full bg-light border-b border-brown placeholder:text-black placeholder:focus:text-gray-400 placeholder:uppercase placeholder:text-sm mb-4 focus:outline-none focus-visible:outline-none" placeholder="{{block.input-box-name-2}}" required>
-      <label for="Message" class="block uppercase text-sm text-black">{{block.input-box-name-3}}</label>
-      <textarea id="Message" name="Message" class="block w-full bg-light border border-golddark mb-4 focus:outline-none focus-visible:outline-none resize-none" rows="6" maxlength="3000" required></textarea>
-      <div class="text-right">
-        <input type="submit" value="Send" class="border bg-brown text- py-2 px-8 uppercase text-sm">
-      </div>
-    </form>
-  </div>
-</section>
 
-section id="contact" class="min-h-50 p-10p text-brown">
-    <div class="grid xl:grid-cols-2 xl:space-x-32">
-        <div>
-            <h3 class="font-header-sans text-7xl pb-5p">Contact</h3>
-             <form action="https://formspree.io/f/xeqygjwy" method="post">
-                <label for="name">Name</label>
-                    <input class="bg-white border-2 border-golddark py-1 px-2 w-full mb-5" type="text" id="name" name="name">
-                    <label for="email">Email</label>
-                    <input class="bg-white border-2 border-golddark py-1 px-2 w-full mb-5" type="email" id="email" name="email">
-                    <label for="message">Message</label>
-                    <textarea class="bg-white border-2 border-golddark py-1 px-2 w-full mb-5" type="text" id="message" name="message" rows="5"></textarea>
-                    <input class="bg-golddark text-brown text-font-header-sans py-1 px-10 ml-auto" type="submit" value="send">
-             </form>
-        </div>
-        
+
+<section id="contact" class="bg-cream px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+
+  <div class="mx-auto max-w-5xl">
+
+    <!-- Heading -->
+    <div class="mb-12 max-w-2xl">
+      <p class="mb-3 text-xs uppercase tracking-[0.3em] text-gold">
+        Get in touch
+      </p>
+
+      <h2 class="text-3xl md:text-4xl lg:text-5xl text-golddark">
+        Let’s create a moment of calm.
+      </h2>
+
+      <p class="mt-5 max-w-xl text-sm leading-7 text-brown/80">
+        Have a question about treatments, availability or bookings?
+        Send us a message and we’ll be in touch soon.
+      </p>
     </div>
+
+
+    <!-- Form -->
+    <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    class="space-y-8"
+    >
+
+    <input type="hidden" name="form-name" value="contact">
+
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you’re human:
+        <input name="bot-field">
+      </label>
+    </p>
+    
+
+      <!-- Name + Email -->
+      <div class="grid gap-8 md:grid-cols-2">
+
+        <div>
+          <label
+            for="name"
+            class="mb-2 block text-xs uppercase tracking-[0.18em] text-golddark"
+          >
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            class="w-full border-0 border-b border-gold/40 bg-transparent
+                   px-0 py-3 text-brown placeholder:text-brown/40
+                   focus:border-gold focus:outline-none focus:ring-0"
+            required
+          >
+        </div>
+
+
+        <div>
+          <label
+            for="email"
+            class="mb-2 block text-xs uppercase tracking-[0.18em] text-golddark"
+          >
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            class="w-full border-0 border-b border-gold/40 bg-transparent
+                   px-0 py-3 text-brown placeholder:text-brown/40
+                   focus:border-gold focus:outline-none focus:ring-0"
+            required
+          >
+        </div>
+
+      </div>
+
+
+      <!-- Phone + Treatment -->
+      <div class="grid gap-8 md:grid-cols-2">
+
+        <div>
+          <label
+            for="phone"
+            class="mb-2 block text-xs uppercase tracking-[0.18em] text-golddark"
+          >
+            Phone
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Optional"
+            class="w-full border-0 border-b border-gold/40 bg-transparent
+                   px-0 py-3 text-brown placeholder:text-brown/40
+                   focus:border-gold focus:outline-none focus:ring-0"
+          >
+        </div>
+
+
+        <div>
+          <label
+            for="treatment"
+            class="mb-2 block text-xs uppercase tracking-[0.18em] text-golddark"
+          >
+            Treatment
+          </label>
+
+          <select
+            id="treatment"
+            name="treatment"
+            class="w-full border-0 border-b border-gold/40 bg-transparent
+                   px-0 py-3 text-brown
+                   focus:border-gold focus:outline-none focus:ring-0"
+          >
+            <option value="">Select a topic</option>
+            <option value="head-massage">Treatment Info and Booking</option>
+            <option value="gua-sha">Buy a Gift Voucher</option>
+            <option value="hot-stone">General Inquiry</option>
+          </select>
+        </div>
+
+      </div>
+
+
+      <!-- Message -->
+      <div>
+        <label
+          for="message"
+          class="mb-2 block text-xs uppercase tracking-[0.18em] text-golddark"
+        >
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Tell us a little about what you're looking for..."
+          class="w-full resize-none border-0 border-b border-gold/40
+                 bg-transparent px-0 py-3 text-brown
+                 placeholder:text-brown/40
+                 focus:border-gold focus:outline-none focus:ring-0"
+          required
+        ></textarea>
+      </div>
+
+
+      <!-- Submit -->
+      <div class="pt-4">
+        <button
+          type="submit"
+          class="inline-flex min-w-[180px] items-center justify-center
+                 rounded-full border border-gold
+                 px-8 py-3 text-xs uppercase tracking-[0.22em]
+                 text-golddark
+                 transition duration-300
+                 hover:bg-gold hover:text-cream"
+        >
+          Send enquiry
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
 </section>
