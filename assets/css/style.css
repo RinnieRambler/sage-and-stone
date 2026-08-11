@@ -538,12 +538,6 @@ video {
 .top-8 {
     top: 2rem;
 }
-.right-6 {
-    right: 1.5rem;
-}
-.top-6 {
-    top: 1.5rem;
-}
 .z-10 {
     z-index: 10;
 }
@@ -719,15 +713,6 @@ video {
 .min-h-screen {
     min-height: 100vh;
 }
-.min-h-6 {
-    min-height: 1.5rem;
-}
-.min-h-4 {
-    min-height: 1rem;
-}
-.min-h-8 {
-    min-height: 2rem;
-}
 .w-4 {
     width: 1rem;
 }
@@ -899,6 +884,9 @@ video {
 }
 .overflow-x-auto {
     overflow-x: auto;
+}
+.overflow-y-hidden {
+    overflow-y: hidden;
 }
 .overflow-x-clip {
     overflow-x: clip;
@@ -1144,6 +1132,10 @@ video {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
+.py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 .pb-10 {
     padding-bottom: 2.5rem;
 }
@@ -1171,6 +1163,9 @@ video {
 .pb-8 {
     padding-bottom: 2rem;
 }
+.pb-9 {
+    padding-bottom: 2.25rem;
+}
 .pl-12 {
     padding-left: 3rem;
 }
@@ -1180,11 +1175,11 @@ video {
 .pl-8 {
     padding-left: 2rem;
 }
+.pl-\[1\.8rem\] {
+    padding-left: 1.8rem;
+}
 .pr-2 {
     padding-right: 0.5rem;
-}
-.pr-2p {
-    padding-right: 2%;
 }
 .pr-4 {
     padding-right: 1rem;
@@ -1210,32 +1205,17 @@ video {
 .pt-16 {
     padding-top: 4rem;
 }
+.pt-2 {
+    padding-top: 0.5rem;
+}
 .pt-4 {
     padding-top: 1rem;
-}
-.pt-5p {
-    padding-top: 5%;
 }
 .pt-6 {
     padding-top: 1.5rem;
 }
 .pt-8 {
     padding-top: 2rem;
-}
-.pb-12 {
-    padding-bottom: 3rem;
-}
-.pb-9 {
-    padding-bottom: 2.25rem;
-}
-.pt-2 {
-    padding-top: 0.5rem;
-}
-.pl-9 {
-    padding-left: 2.25rem;
-}
-.pl-\[1\.8rem\] {
-    padding-left: 1.8rem;
 }
 .text-left {
     text-align: left;
@@ -1388,12 +1368,6 @@ video {
 }
 .text-shadow {
     text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
-}
-.text-shadow-lg {
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-}
-.text-shadow-xl {
-    text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
 }
 
 /* Custom CSS */
@@ -1757,9 +1731,6 @@ dialog{
     .md\:h-\[640px\] {
         height: 640px;
     }
-    .md\:min-h-10 {
-        min-height: 10vh;
-    }
     .md\:w-\[30vw\] {
         width: 30vw;
     }
@@ -1833,6 +1804,10 @@ dialog{
         padding-left: 3.5rem;
         padding-right: 3.5rem;
     }
+    .md\:px-16 {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
     .md\:px-20 {
         padding-left: 5rem;
         padding-right: 5rem;
@@ -1849,13 +1824,13 @@ dialog{
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
-    .md\:px-16 {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
     .md\:py-8 {
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
+    .md\:py-0 {
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .md\:pb-0 {
         padding-bottom: 0px;
@@ -2073,8 +2048,5 @@ dialog{
     }
     .xl\:p-\[7\%\] {
         padding: 7%;
-    }
-    .xl\:pt-20p {
-        padding-top: 20%;
     }
 }
