@@ -1310,6 +1310,9 @@ video {
 .font-semibold {
     font-weight: 600;
 }
+.font-normal {
+    font-weight: 400;
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -1391,6 +1394,9 @@ video {
 .text-golddark {
     --tw-text-opacity: 1;
     color: rgb(195 169 75 / var(--tw-text-opacity));
+}
+.text-brown\/90 {
+    color: rgb(128 101 80 / 0.9);
 }
 .underline {
     text-decoration-line: underline;
